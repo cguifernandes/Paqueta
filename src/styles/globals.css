@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap%27');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+    outline: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    font-family: 'Poppins', -apple-system, sans-serif, system-ui, BlinkMacSystemFont, 'Segoe UI';
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    min-height: 100vh;
+}
