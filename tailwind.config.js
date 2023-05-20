@@ -12,17 +12,14 @@ module.exports = {
           100: "#FF8A29",
           200: "#F57002",
           300: "#CF5D00"
+        },
+        grey: {
+          100: '#383838'
         }
       },
-      fontSize: {
-        xs: 14,
-        sm: 16,
-        md: 18,
-        lg: 20,
-        xl: 24,
-        xxl: 28,
-        '2xl': '2rem',
-        '3xl': '2.5rem',
+      backgroundImage: {
+        'banner-hero': 
+        "url('https://github.com/leovargasdev/br-challenges-paqueta-calcados/blob/master/assets/banner-hero.png?raw=true')"
       },
     },
   },

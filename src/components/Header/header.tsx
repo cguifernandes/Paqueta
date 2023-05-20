@@ -3,6 +3,7 @@ import { Bag, Headphones, HeartStraight, MapPin, User } from "phosphor-react";
 import Text from "../Text/text";
 import Image from "next/image";
 import Logo from "../../assets/logo.png"
+import clsx from "clsx";
 
 const Header = () => {
     return (  
@@ -23,27 +24,31 @@ const Header = () => {
             <header className="flex items-center justify-around py-8">
                 <Image src={Logo.src} alt="Logo" width={297} height={86} />
                 <div className="flex">
-                    <div className="flex items-center justify-center mx-4 cursor-pointer">
+                    <p>DEIXAR FIXED CO ANIMACAO</p>
+                    <div className="flex items-center justify-center mx-6 cursor-pointer">
                         <HeartStraight className="mx-2" size={32} color="#000" />
                         <Text>Lista de desejos</Text>
                     </div>
-                    <div className="flex items-center justify-center mx-4 cursor-pointer">
+                    <div className="flex items-center justify-center mx-6 cursor-pointer">
                         <Bag className="mx-2 fill-orange-100" size={32} color="#000" />
                         <Text>Sacola</Text>
                     </div>
-                    <div className="flex items-center justify-center mx-4 cursor-pointer">
-                        <User className="mx-2" size={32} color="#000" />
-                        <Text>Entrar FAZER HOVER</Text>
+                    <div className={clsx(
+                        "group ease duration-200 flex items-center justify-center mx-6 py-2 px-4 cursor-pointer rounded-md",  
+                        "hover:bg-orange-100 text-white"
+                    )}>
+                        <User className="mr-2 text-black ease duration-200  group-hover:text-white" size={32} />
+                        <Text className={"ease duration-200 group-hover:text-white"}>Entrar</Text>
                     </div>
                 </div>
             </header>
-            <div className="flex items-center justify-evenly">
-                <Text>Novidades</Text>
-                <Text>Feminino</Text>
-                <Text>Masculino</Text>
-                <Text>Paquetá Esportes</Text>
-                <Text>Outlet</Text>
-                <Text>Cashback</Text>
+            <div className="flex items-center justify-between py-4 px-[240px]">
+                <Text className={'cursor-pointer hover:text-black/60'}>Novidades</Text>
+                <Text className={'cursor-pointer hover:text-black/60'}>Feminino</Text>
+                <Text className={'cursor-pointer hover:text-black/60'}>Masculino</Text>
+                <Text className={'cursor-pointer hover:text-black/60'}>Paquetá Esportes</Text>
+                <Text className={'cursor-pointer hover:text-black/60'}>Outlet</Text>
+                <Text className={'cursor-pointer hover:text-black/60'}>Cashback</Text>
             </div>
         </>
     );
