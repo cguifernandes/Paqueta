@@ -7,7 +7,7 @@ const Text = ({ children, size = 'md', className, align = 'left' } : TextProps) 
     return (
       <p
         className={clsx(
-          "text-black",
+          "text-grey-100",
           {
             "text-sm": size === "sm",
             "text-md": size === "md",

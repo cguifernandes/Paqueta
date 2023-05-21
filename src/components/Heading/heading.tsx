@@ -5,7 +5,7 @@ const Heading = ({ children, size = 'md', className, align = 'left' } : TextProp
     return (  
         <h1
         className={clsx(
-          "text-black font-bold",
+          "text-grey-100 font-bold",
           {
             "text-sm": size === "sm",
             "text-md": size === "md",

@@ -27,3 +27,8 @@ export type ButtonProps = {
     width: number
     className?: string
 }
+
+export type NumberProps = {
+    number: number
+    soldOut?: boolean
+}

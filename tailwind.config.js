@@ -14,8 +14,10 @@ module.exports = {
           300: "#CF5D00"
         },
         grey: {
-          100: '#383838'
-        }
+          100: '#383838',
+          800: '#ebebeb'
+        },
+        
       },
       backgroundImage: {
         'banner-hero': 
