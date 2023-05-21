@@ -19,7 +19,11 @@ module.exports = {
       },
       backgroundImage: {
         'banner-hero': 
-        "url('https://github.com/leovargasdev/br-challenges-paqueta-calcados/blob/master/assets/banner-hero.png?raw=true')"
+        "url('https://github.com/leovargasdev/br-challenges-paqueta-calcados/blob/master/assets/banner-hero.png?raw=true')",
+        'calcados-femininos':
+        "linear-gradient(to left, transparent 40%, rgba(255, 138, 41, 1) 100%), url('https://github.com/leovargasdev/br-challenges-paqueta-calcados/blob/master/assets/calcados-femininos.png?raw=true')",
+        'calcados-masculinos':
+        "linear-gradient(to right, transparent 40%, rgba(255, 138, 41, 1) 100%), url('https://github.com/leovargasdev/br-challenges-paqueta-calcados/blob/master/assets/calcados-masculinos.png?raw=true')"
       },
     },
   },

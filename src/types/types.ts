@@ -25,4 +25,5 @@ export type CardProps = {
 export type ButtonProps = {
     children: ReactNode
     width: number
+    className?: string
 }

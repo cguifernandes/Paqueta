@@ -1,10 +1,11 @@
 import { ButtonProps } from "@/types/types";
+import clsx from "clsx";
 
-const Button = ({ children, width } : ButtonProps) => {
+const Button = ({ children, width, className } : ButtonProps) => {
     return (  
         <button 
             style={{width: width}} 
-            className="py-2 bg-orange-100 text-white duration-200 ease hover:bg-orange-200"
+            className={clsx("py-2 rounded-[8px] bg-orange-100 text-white duration-200 ease hover:bg-orange-200", className)}
         >
             {children}
         </button>
