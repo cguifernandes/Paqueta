@@ -1,8 +1,8 @@
-import { CardProps } from "@/types/types";
+import { GroupProps } from "@/components/types";
 import Heading from "@/components/Heading/heading";
 import Text from "@/components/Text/text";
 
-const Card = ({ icon, size, color, weight, heading, text, headingOnTop, bold, width, strong, thin } : CardProps) => {
+const Group = ({ icon, size, color, weight, heading, text, headingOnTop, bold, width, strong, thin } : GroupProps) => {
     let Icon = icon
 
     return (  
@@ -37,4 +37,4 @@ const Card = ({ icon, size, color, weight, heading, text, headingOnTop, bold, wi
     );
 }
  
-export default Card;
+export default Group;

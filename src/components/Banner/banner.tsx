@@ -1,12 +1,12 @@
 'use client'
 import { ArrowsClockwise, CreditCard, MapPin, Package } from "phosphor-react";
 import { CiDiscount1 } from "react-icons/ci"
-import Card from "../Card/card";
+import Group from "../Group/group";
 
 const Banner = () => {
     return (  
         <div className="bg-gradient-to-r from-orange-100 to-orange-300 h-[160px] flex justify-evenly">
-            <Card 
+            <Group 
                 weight="thin" 
                 size={64} 
                 color="#ffffff" 
@@ -14,7 +14,7 @@ const Banner = () => {
                 heading="SEM JUROS*" 
                 text="PAGUE EM ATÉ 10X"
             />
-            <Card 
+            <Group 
                 weight="thin" 
                 headingOnTop 
                 size={64} 
@@ -23,7 +23,7 @@ const Banner = () => {
                 heading="RETIRE GRÁTIS" 
                 text="EM NOSSAS LOJAS"
             />
-            <Card 
+            <Group 
                 weight="thin" 
                 headingOnTop 
                 size={64} 
@@ -33,7 +33,7 @@ const Banner = () => {
                 width={125}
                 heading="GANHE 20% DE DESCONTO*" 
             />
-            <Card 
+            <Group 
                 weight="thin" 
                 headingOnTop 
                 size={64} 
@@ -43,7 +43,7 @@ const Banner = () => {
                 strong="FRETE GRÁTIS "
                 text="PARA REGIÕES SUL E SUDESTE*"
             />
-            <Card 
+            <Group 
                 weight="thin" 
                 headingOnTop 
                 size={64} 

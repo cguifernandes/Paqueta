@@ -1,4 +1,4 @@
-import { TextProps } from "@/types/types";
+import { TextProps } from "@/components/types";
 import clsx from "clsx";
 
 const Heading = ({ children, size = 'md', className, align = 'left' } : TextProps) => {

@@ -1,7 +1,5 @@
-import { TextProps } from "@/types/types";
+import { TextProps } from "@/components/types";
 import clsx from "clsx";
-import { ReactNode } from "react";
-
 
 const Text = ({ children, size = 'md', className, align = 'left' } : TextProps) => {
     return (

@@ -5,6 +5,7 @@ import Text from "@/components/Text/text";
 import Image from "next/image";
 import Logo from "../assets/logo.png"
 import Number from "@/components/Number/number";
+import Card from "@/components/Cards/cards";
 
 export const metadata = {
   title: "Paquetá | Home",
@@ -13,7 +14,7 @@ export const metadata = {
 const Main = () => {
   return (  
     <main>
-      <div className="bg-banner-hero h-[622px] object-cover relative">
+      <div className="bg-banner-hero h-[622px] w-full object-cover relative">
         <div className="absolute right-40 -translate-y-[50%] top-[50%]">
           <Heading className={'text-7xl'}>Tênis Casual</Heading>
           <Heading className={'text-orange-200 text-5xl'}>Masculino</Heading>
@@ -47,9 +48,9 @@ const Main = () => {
       </div>
       <div className="w-[75%] h-[2px] bg-grey-100/20 block m-[0_auto]" />
       <div className="py-[80px]">
-        <div className="flex justify-between items-center py-[50px] px-[12.5%]">
+        <div className="flex justify-between items-center pb-[50px] px-[12.5%]">
           <div>
-            <Image src={Logo.src} alt="Logo" width={297} height={84} /> 
+            <img src={Logo.src} alt="Logo" /> 
             <Heading align="right" className={"text-orange-100 text-5xl"}>OUTLET</Heading>
           </div>
           <Text className={"w-[580px] text-xl"} align="right">Você também pode escolher o seu novo sapato favorito de acordo com a sua numeração.</Text>
@@ -67,6 +68,15 @@ const Main = () => {
           <Number number={42} />
           <Number number={43} />
           <Number number={44} />
+        </div>
+      </div>
+      <div>
+        <div className="flex items-center justify-between px-[12.5%] py-10">
+          <Heading className={"text-4xl"}>DESTAQUES</Heading>
+          <Text className={"text-xl cursor-pointer hover:text-black/60"}>CONFERIR TUDO</Text>
+        </div>
+        <div className="px-[12.5%]">
+          <Card />
         </div>
       </div>
     </main>

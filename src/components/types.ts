@@ -1,4 +1,3 @@
-import { IconProps } from "phosphor-react"
 import { ReactNode } from "react"
 
 export type TextProps = {
@@ -8,7 +7,7 @@ export type TextProps = {
     align?: 'left' | 'center' | 'right'
 }
 
-export type CardProps = {
+export type GroupProps = {
     icon: any
     size: number
     color: string
@@ -24,11 +23,25 @@ export type CardProps = {
 
 export type ButtonProps = {
     children: ReactNode
-    width: number
+    width?: number
     className?: string
 }
 
 export type NumberProps = {
     number: number
     soldOut?: boolean
+}
+
+export type CardProps = {
+    description: string
+    id: string
+    image: string
+    name: string
+    price: PriceProps
+    soldout: boolean
+}
+
+type PriceProps = {
+    discount: number
+    value: number
 }

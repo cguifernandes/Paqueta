@@ -25,3 +25,13 @@ a {
 html, body {
     min-height: 100vh;
 }
+
+div.swiper-button-prev,
+div.swiper-button-next {
+   color: #FF8A29;
+}
+
+div.swiper-button-prev {
+    right: 20px !important;
+    left: 20px;
+}

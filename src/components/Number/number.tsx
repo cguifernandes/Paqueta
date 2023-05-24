@@ -1,4 +1,4 @@
-import { NumberProps } from "@/types/types";
+import { NumberProps } from "@/components/types";
 import Text from "../Text/text";
 
 const Number = ({ number, soldOut } : NumberProps) => {

@@ -1,4 +1,4 @@
-import { ButtonProps } from "@/types/types";
+import { ButtonProps } from "@/components/types";
 import clsx from "clsx";
 
 const Button = ({ children, width, className } : ButtonProps) => {
