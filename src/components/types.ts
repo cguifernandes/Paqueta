@@ -33,12 +33,12 @@ export type NumberProps = {
 }
 
 export type CardProps = {
-    description: string
-    id: string
-    image: string
-    name: string
+    description?: string
+    id?: string
+    image?: string
+    name?: string
     price: PriceProps
-    soldout: boolean
+    soldout?: boolean
 }
 
 type PriceProps = {

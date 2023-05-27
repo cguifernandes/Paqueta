@@ -21,7 +21,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <header className="flex items-center justify-around py-8">
+            <header className="flex items-center justify-around py-12">
                 <img src={Logo.src} alt="Logo" />
                 <div className="flex">
                     <p>DEIXAR FIXED CO ANIMACAO</p>

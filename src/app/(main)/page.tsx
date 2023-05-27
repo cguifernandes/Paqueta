@@ -2,10 +2,9 @@ import Banner from "@/components/Banner/banner";
 import Button from "@/components/Button/button";
 import Heading from "@/components/Heading/heading";
 import Text from "@/components/Text/text";
-import Image from "next/image";
-import Logo from "../assets/logo.png"
+import Logo from "../../assets/logo.png"
 import Number from "@/components/Number/number";
-import Card from "@/components/Cards/cards";
+import Cards from "@/components/Cards/cards";
 
 export const metadata = {
   title: "Paquetá | Home",
@@ -76,7 +75,7 @@ const Main = () => {
           <Text className={"text-xl cursor-pointer hover:text-black/60"}>CONFERIR TUDO</Text>
         </div>
         <div className="px-[12.5%]">
-          <Card />
+          <Cards />
         </div>
       </div>
     </main>
