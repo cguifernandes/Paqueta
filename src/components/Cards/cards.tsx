@@ -1,26 +1,34 @@
 'use client'
-import { useEffect, useState } from "react";
-import { api } from "../api";
+import { SetStateAction, useEffect, useState } from "react";
 import { CardProps } from "../types";
-import Text from "../Text/text";
-import Heading from "../Heading/heading";
-import Button from "../Button/button";
-import { Heart } from "phosphor-react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import "swiper/css/navigation"
 import Card from "./card";
+import { api } from "../api";
+
+const getData = async () => {
+    const response = await api.get("/shoes");
+
+    return response.data;
+}
 
 const Cards = () => {
-    const [shoes, setShoes] = useState<CardProps[]>();
+    const [shoes, setShoes] = useState<CardProps[] | null>(null);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        api.get("/shoes").then((response) => {
-            setShoes(response.data)
-        })
-    }, [])
+        async function fetchCardsData() {
+            setLoading(true);
+            const data = await getData();
+            setShoes(data);
+            setLoading(false);
+        }
+    
+        fetchCardsData();
+    }, []);
 
     return (  
         <Swiper
@@ -32,17 +40,26 @@ const Cards = () => {
             scrollbar={{ draggable: true }}
             className="!px-2 !pb-16"
         >
-            {shoes?.map((shoes, index) => {
-                    return (
-                    <SwiperSlide key={index}>
-                        <Card
-                            name={shoes.name}
-                            price={shoes.price}
-                            image={shoes.image}
-                        />
-                    </SwiperSlide>
-                )
-            })}
+            {
+                <SwiperSlide>
+                    <div>
+                        <p>loading</p>
+                    </div>
+                </SwiperSlide>
+                // :
+                // shoes?.map((shoes, index) => {
+                //         return (
+                //         <SwiperSlide key={index}>
+                //             <Card
+                //                 soldout={shoes.soldout}
+                //                 name={shoes.name}
+                //                 price={shoes.price}
+                //                 image={shoes.image}
+                //             />
+                //         </SwiperSlide>
+                //     )
+                // })
+            }
         </Swiper>
     );
 }

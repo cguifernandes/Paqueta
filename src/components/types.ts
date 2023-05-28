@@ -25,6 +25,7 @@ export type ButtonProps = {
     children: ReactNode
     width?: number
     className?: string
+    soldOut?: boolean
 }
 
 export type NumberProps = {
@@ -39,6 +40,7 @@ export type CardProps = {
     name?: string
     price: PriceProps
     soldout?: boolean
+    isLoading?: boolean
 }
 
 type PriceProps = {

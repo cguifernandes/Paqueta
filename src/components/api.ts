@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: 'https://api.brchallenges.com/api/paqueta'
-});
+    baseURL: "https://api.brchallenges.com/api/paqueta"
+})

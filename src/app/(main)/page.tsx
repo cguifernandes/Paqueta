@@ -3,17 +3,28 @@ import Button from "@/components/Button/button";
 import Heading from "@/components/Heading/heading";
 import Text from "@/components/Text/text";
 import Logo from "../../assets/logo.png"
+import BannerHero from "../../assets/banner-hero.png"
+import Adidas from "../../assets/marcas/adidas.png";
+import Bebece from "../../assets/marcas/bebece.png";
+import Dumond from "../../assets/marcas/dumond.png";
+import ViaMarte from "../../assets/marcas/via-marte.png";
 import Number from "@/components/Number/number";
 import Cards from "@/components/Cards/cards";
+import Image from "next/image";
+import Calcados from "@/components/Calcados/calcados";
+
 
 export const metadata = {
   title: "Paquetá | Home",
 }
 
 const Main = () => {
+
+
   return (  
     <main>
-      <div className="bg-banner-hero h-[622px] w-full object-cover relative">
+      <div className="w-full relative">
+        <Image className="w-full object-cover" src={BannerHero} alt="Banner Hero"/>
         <div className="absolute right-40 -translate-y-[50%] top-[50%]">
           <Heading className={'text-7xl'}>Tênis Casual</Heading>
           <Heading className={'text-orange-200 text-5xl'}>Masculino</Heading>
@@ -25,26 +36,7 @@ const Main = () => {
         </div>
       </div>
       <Banner />
-      <div className="flex flex-col py-[80px] gap-y-[80px]">
-        <div className="flex justify-evenly items-center">
-          <div className="bg-calcados-femininos h-[620px] w-[668px] relative rounded-[8px]">
-            <Text className={"absolute bottom-12 left-12 text-5xl text-white leading-tight"}>CALÇADOS<br/> FEMININOS</Text>
-          </div>
-          <div className="w-[630px]">
-            <Text align="right" className={"text-xl"}>Escolher o seu sapato favorito entre nossa <span className="text-black font-medium">variedade de modelos e cores</span> não será uma tarefa fácil, mas o que uma mulher não consegue fazer?</Text>
-            <Button className="mt-8 float-right" width={285}>CONFERIR</Button>
-          </div>
-        </div>
-        <div className="flex justify-evenly items-center">
-          <div className="w-[630px]">
-            <Text align="left" className={"text-xl"}>Tenha em seu guarda roupa sapatos de qualidade e confortáveis, para o dia a dia, trabalho e até mesmo para praticar esportes!</Text>
-            <Button className="mt-8 float-left" width={285}>CONFERIR</Button>
-          </div>
-          <div className="bg-calcados-masculinos h-[620px] w-[668px] relative rounded-[8px]">
-            <Text align="right" className={"absolute bottom-12 right-12 text-5xl text-white leading-tight"}>CALÇADOS<br/> MASCULINOS</Text>
-          </div>
-        </div>
-      </div>
+      <Calcados />
       <div className="w-[75%] h-[2px] bg-grey-100/20 block m-[0_auto]" />
       <div className="py-[80px]">
         <div className="flex justify-between items-center pb-[50px] px-[12.5%]">
@@ -71,11 +63,20 @@ const Main = () => {
       </div>
       <div>
         <div className="flex items-center justify-between px-[12.5%] py-10">
-          <Heading className={"text-4xl"}>DESTAQUES</Heading>
-          <Text className={"text-xl cursor-pointer hover:text-black/60"}>CONFERIR TUDO</Text>
+          <Heading className={"text-3xl"}>DESTAQUES</Heading>
+          <Text className={"text-lg cursor-pointer hover:text-black/60"}>CONFERIR TUDO</Text>
         </div>
         <div className="px-[12.5%]">
           <Cards />
+        </div>
+        <div>
+          <Heading className={"text-3xl px-[12.5%] py-10"}>AS MELHORES MARCAS ESTÃO AQUI!</Heading>
+        </div>
+        <div className="flex justify-between items-center px-[12.5%] py-16">
+          <img src={Adidas.src} />
+          <img src={Bebece.src} />
+          <img src={Dumond.src} />
+          <img src={ViaMarte.src} />
         </div>
       </div>
     </main>

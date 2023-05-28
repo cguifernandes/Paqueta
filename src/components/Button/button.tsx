@@ -1,11 +1,17 @@
 import { ButtonProps } from "@/components/types";
 import clsx from "clsx";
 
-const Button = ({ children, width, className } : ButtonProps) => {
+const Button = ({ children, width, className, soldOut = false } : ButtonProps) => {
     return (  
         <button 
             style={{width: width}} 
-            className={clsx("py-2 rounded-[8px] bg-orange-100 text-white duration-200 ease hover:bg-orange-200", className)}
+            className={clsx(
+                "py-2 rounded-[8px] text-white duration-200 ease", 
+                soldOut ? "bg-orange-300 hover:bg-orange-400"
+                :
+                "bg-orange-100 hover:bg-orange-200",
+                className
+            )}
         >
             {children}
         </button>
