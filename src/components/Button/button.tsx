@@ -6,7 +6,7 @@ const Button = ({ children, width, className, soldOut = false } : ButtonProps) =
         <button 
             style={{width: width}} 
             className={clsx(
-                "py-2 rounded-[8px] text-white duration-200 ease", 
+                "py-2 rounded-[4px] text-white duration-200 ease", 
                 soldOut ? "bg-orange-300 hover:bg-orange-400"
                 :
                 "bg-orange-100 hover:bg-orange-200",

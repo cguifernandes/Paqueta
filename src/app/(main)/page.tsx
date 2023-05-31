@@ -63,14 +63,14 @@ const Main = () => {
       </div>
       <div>
         <div className="flex items-center justify-between px-[12.5%] py-10">
-          <Heading className={"text-3xl"}>DESTAQUES</Heading>
-          <Text className={"text-lg cursor-pointer hover:text-black/60"}>CONFERIR TUDO</Text>
+          <Heading className={"text-3xl font-montserrat"}>DESTAQUES</Heading>
+          <Text className={"text-lg cursor-pointer font-montserrat hover:text-black/50"}>CONFERIR TUDO</Text>
         </div>
         <div className="px-[12.5%]">
           <Cards />
         </div>
         <div>
-          <Heading className={"text-3xl px-[12.5%] py-10"}>AS MELHORES MARCAS ESTÃO AQUI!</Heading>
+          <Heading className={"text-3xl px-[12.5%] py-10 font-montserrat"}>AS MELHORES MARCAS ESTÃO AQUI!</Heading>
         </div>
         <div className="flex justify-between items-center px-[12.5%] py-16">
           <img src={Adidas.src} />

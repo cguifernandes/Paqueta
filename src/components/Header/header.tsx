@@ -1,9 +1,9 @@
 'use client'
 import { Bag, Headphones, HeartStraight, MapPin, User } from "phosphor-react";
 import Text from "../Text/text";
-import Image from "next/image";
 import Logo from "../../assets/logo.png"
 import clsx from "clsx";
+import Link from "next/link";
 
 const Header = () => {
     return (  
@@ -22,7 +22,9 @@ const Header = () => {
                 </div>
             </div>
             <header className="flex items-center justify-around py-12">
-                <img src={Logo.src} alt="Logo" />
+                <Link href={"/"}>
+                    <img src={Logo.src} alt="Logo" />
+                </Link>
                 <div className="flex">
                     <p>DEIXAR FIXED CO ANIMACAO</p>
                     <div className="flex items-center justify-center mx-6 cursor-pointer">

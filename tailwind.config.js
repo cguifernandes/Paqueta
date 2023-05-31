@@ -34,9 +34,9 @@ module.exports = {
         'calcados-masculinos-shadow':
         "linear-gradient(to right, transparent 40%, rgba(255, 138, 41, 1) 100%)"
       },
-      boxShadow: {
-        "shadow-lg":
-        "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;"
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif']
       }
     },
   },

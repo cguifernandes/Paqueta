@@ -8,6 +8,7 @@ import 'swiper/css/scrollbar';
 import "swiper/css/navigation"
 import Card from "./card";
 import { api } from "../api";
+import Skeleton from "../Skeleton/skeleton";
 
 const getData = async () => {
     const response = await api.get("/shoes");
@@ -41,24 +42,43 @@ const Cards = () => {
             className="!px-2 !pb-16"
         >
             {
-                <SwiperSlide>
-                    <div>
-                        <p>loading</p>
-                    </div>
-                </SwiperSlide>
-                // :
-                // shoes?.map((shoes, index) => {
-                //         return (
-                //         <SwiperSlide key={index}>
-                //             <Card
-                //                 soldout={shoes.soldout}
-                //                 name={shoes.name}
-                //                 price={shoes.price}
-                //                 image={shoes.image}
-                //             />
-                //         </SwiperSlide>
-                //     )
-                // })
+                loading ?
+                <>
+                    <SwiperSlide>
+                        <div className="w-[335px]">
+                            <Skeleton width={335} height={550} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="w-[335px]">
+                            <Skeleton width={335} height={550} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="w-[335px]">
+                            <Skeleton width={335} height={550} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="w-[335px]">
+                            <Skeleton width={335} height={550} />
+                        </div>
+                    </SwiperSlide>
+                </>
+                :
+                shoes?.map((shoes, index) => {
+                        return (
+                        <SwiperSlide key={index}>
+                            <Card
+                                soldout={shoes.soldout}
+                                name={shoes.name}
+                                price={shoes.price}
+                                image={shoes.image}
+                                id={shoes.id}
+                            />
+                        </SwiperSlide>
+                    )
+                })
             }
         </Swiper>
     );
