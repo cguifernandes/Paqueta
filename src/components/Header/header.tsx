@@ -26,7 +26,6 @@ const Header = () => {
                     <img src={Logo.src} alt="Logo" />
                 </Link>
                 <div className="flex">
-                    <p>DEIXAR FIXED CO ANIMACAO</p>
                     <div className="flex items-center justify-center mx-6 cursor-pointer">
                         <HeartStraight className="mx-2" size={32} color="#000" />
                         <Text>Lista de desejos</Text>

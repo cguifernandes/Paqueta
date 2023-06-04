@@ -22,7 +22,7 @@ const Main = () => {
 
 
   return (  
-    <main>
+    <>
       <div className="w-full relative">
         <Image className="w-full object-cover" src={BannerHero} alt="Banner Hero"/>
         <div className="absolute right-40 -translate-y-[50%] top-[50%]">
@@ -79,7 +79,7 @@ const Main = () => {
           <img src={ViaMarte.src} />
         </div>
       </div>
-    </main>
+    </>
   );
 }
  

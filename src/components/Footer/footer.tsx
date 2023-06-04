@@ -1,6 +1,5 @@
 'use client'
 import { Check, EnvelopeSimple, User } from "phosphor-react";
-import { FaFacebook, FaInstagram, FaPinterest, FaTwitter, FaYoutube } from "react-icons/fa"
 import Heading from "../Heading/heading";
 import Text from "../Text/text";
 import Button from "../Button/button";
@@ -14,7 +13,11 @@ import MasterCard from "../../assets/cards/mastercard.png";
 import Paqueta from "../../assets/cards/paqueta.png";
 import Visa from "../../assets/cards/visa.png";
 import Certificado from "../../assets/certificado.png";
+import FooterImagem from "../../assets/footer.png";
 import Seguranca from "../../assets/seguranca.png";
+import Arrow from "../../assets/arrow.png";
+import Line from "../../assets/line.png";
+import Sociais from "../Sociais/sociais";
 
 const Footer = () => {
     return ( 
@@ -23,12 +26,8 @@ const Footer = () => {
                 <div className="flex items-center">
                     <Heading className={"text-4xl text-white w-[460px] space-y-20 font-montserrat"}>SEJA O PRIMEIRO A RECEBER NOSSAS OFERTAS E NOVIDADES EXCLUSIVAS!</Heading>
                     <div className="relative top-10 left-10 w-[160px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="107" height="89" fill="none" viewBox="0 0 107 89" >
-                            <path stroke="#fff" strokeDasharray="20 20" strokeWidth="4" d="M106.163 86.242l-42.718-5.325c-23.728-2.958-43.134-20.321-48.702-43.575L8.575 11.586A13.324 13.324 0 001 2.5v0"></path>
-                        </svg>
-                        <svg className="absolute right-0 top-[57px]" xmlns="http://www.w3.org/2000/svg" width="68" height="66" fill="none" viewBox="0 0 68 66">
-                            <path stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M65.44 44.951L29.62 31.998M65.44 44.949l-51.454 5.253 15.746-18.166-.485-24.035L65.44 44.95z" ></path>
-                        </svg>
+                        <img src={Line.src} />
+                        <img className="absolute right-0 top-[57px]" src={Arrow.src} />
                     </div>
                 </div>
                 <form>
@@ -110,23 +109,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <Heading className="text-xl mb-4">Redes Sociais</Heading>
-                        <div className="flex items-center justify-around">
-                            <div className="p-2 mx-1 rounded-full duration-200 hover:bg-[rgba(51,_51,_51,_0.5)]">
-                                <FaInstagram className="cursor-pointer" size={32} />
-                            </div>
-                            <div className="p-2 mx-1 rounded-full duration-200 hover:bg-[rgba(51,_51,_51,_0.5)]">
-                                <FaFacebook className="cursor-pointer" size={32} />
-                            </div>
-                            <div className="p-2 mx-1 rounded-full duration-200 hover:bg-[rgba(51,_51,_51,_0.5)]">
-                                <FaTwitter className="cursor-pointer" size={32} />
-                            </div>
-                            <div className="p-2 mx-1 rounded-full duration-200 hover:bg-[rgba(51,_51,_51,_0.5)]">
-                                <FaYoutube className="cursor-pointer" size={32} />
-                            </div>
-                            <div className="p-2 mx-1 rounded-full duration-200 hover:bg-[rgba(51,_51,_51,_0.5)]">
-                                <FaPinterest className="cursor-pointer" size={32} />
-                            </div>
-                        </div>
+                        <Sociais />
                     </div>
                 </div>
                 <div className="flex flex-col justify-between h-[330px]">
@@ -140,8 +123,9 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <div>
-
+            <div className="w-full bg-[#383838] h-[100px] items-center justify-center gap-x-7 flex">
+                <Text className={"text-lg text-white"}>UMA EMPRESA DO GRUPO </Text>
+                <img className="w-[265px] h-[59px]" src={FooterImagem.src} />
             </div>
         </> 
     );

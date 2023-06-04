@@ -21,6 +21,16 @@ export type GroupProps = {
     thin?: boolean
 }
 
+export type SociaisProps = {
+    className?: string
+}
+
+export type ParamsProps = {
+    params: {
+        id: string
+    }
+}
+
 export type ButtonProps = {
     children: ReactNode
     width?: number
@@ -31,16 +41,18 @@ export type ButtonProps = {
 export type NumberProps = {
     number: number
     soldOut?: boolean
+    product?: boolean
 }
 
 export type CardProps = {
     description?: string
-    id?: string
-    image?: string
-    name?: string
+    id: string
+    image: string
+    name: string
     price: PriceProps
     soldout?: boolean
     isLoading?: boolean
+    product?: boolean
 }
 
 type PriceProps = {
