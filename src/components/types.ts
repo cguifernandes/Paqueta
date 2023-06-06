@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { Dispatch, ReactNode, SetStateAction } from "react"
 
 export type TextProps = {
     children: ReactNode,
@@ -19,6 +19,11 @@ export type GroupProps = {
     width?: number
     strong?: string
     thin?: boolean
+    className?: string
+}
+
+export type TamanhoProps = {
+    setVisibleTamanho: Dispatch<SetStateAction<boolean>>
 }
 
 export type SociaisProps = {

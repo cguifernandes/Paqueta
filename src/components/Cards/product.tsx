@@ -84,24 +84,24 @@ const Product = ({params} : ParamsProps) => {
                                 )
                             })
                         }
-                        <div className="w-[280px] absolute left-[15%] -bottom-2">
+                        <div className="w-[70%] mt-12 sm:w-[380px] block m-[0_auto] xl:absolute xl:left-[15%] xl:[280px] xl:-bottom-2">
                             <Text className={"py-2 pl-[12px]"}>Compartilhe</Text>
                             <Sociais className="justify-between" />
                         </div>
                     </div>
-                    <div className="py-12 w-[69%]">
+                    <div className="py-12 w-[80%] sm:w-[69%]">
                         {
                             shoes?.map((shoes, index) => {
                                 return (
                                     <>
                                         <Heading className={"text-2xl font-montserrat py-3"}>DESCRIÇÃO DO PRODUTO</Heading>
-                                        <Text className={"text-grey-500"} key={index}>{shoes.description}</Text>
+                                        <Text className={"text-grey-500 text-lg"} key={index}>{shoes.description}</Text>
                                     </>
                                 )
                             })
                         }
                     </div>
-                    <div className="px-[12.5%] w-full pt-8">
+                    <div className="px-[8.5%] sm:px-[12.5%] w-full pt-8">
                         <Cards />
                     </div>
                 </>

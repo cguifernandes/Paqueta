@@ -1,12 +1,13 @@
 import { GroupProps } from "@/components/types";
 import Heading from "@/components/Heading/heading";
 import Text from "@/components/Text/text";
+import clsx from "clsx";
 
-const Group = ({ icon, size, color, weight, heading, text, headingOnTop, bold, width, strong, thin } : GroupProps) => {
+const Group = ({ icon, size, color, weight, heading, text, headingOnTop, bold, width, strong, thin, className } : GroupProps) => {
     let Icon = icon
 
     return (  
-        <div className="flex justify-center gap-x-4 items-center">
+        <div className={clsx("flex justify-center gap-x-4 items-center", className)}>
             <Icon color={color} size={size} weight={weight} />
             <div style={{width: width}} className={`flex flex-col`}>
                 {

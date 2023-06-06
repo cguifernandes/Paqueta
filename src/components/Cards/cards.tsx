@@ -33,10 +33,27 @@ const Cards = () => {
 
     return (  
         <Swiper
-            spaceBetween={30}
-            slidesPerView={4}
             speed={200}
             autoplay
+            spaceBetween={20}
+            breakpoints={{
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                },
+                1536: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+            }}
             modules={[Scrollbar, Autoplay ]}
             scrollbar={{ draggable: true }}
             className="!px-2 !pb-16"
@@ -45,24 +62,16 @@ const Cards = () => {
                 loading ?
                 <>
                     <SwiperSlide>
-                        <div className="w-[335px]">
-                            <Skeleton width={335} height={550} />
-                        </div>
+                            <Skeleton className="w-full flex justify-center items-center" height={550} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="w-[335px]">
-                            <Skeleton width={335} height={550} />
-                        </div>
+                            <Skeleton className="w-full flex justify-center items-center" height={550} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="w-[335px]">
-                            <Skeleton width={335} height={550} />
-                        </div>
+                            <Skeleton className="w-full flex justify-center items-center" height={550} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="w-[335px]">
-                            <Skeleton width={335} height={550} />
-                        </div>
+                            <Skeleton className="w-full flex justify-center items-center" height={550} />
                     </SwiperSlide>
                 </>
                 :

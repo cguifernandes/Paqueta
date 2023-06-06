@@ -7,19 +7,25 @@ import { useState } from "react";
 import clsx from "clsx";
 import Number from "@/components/Number/number";
 import Link from "next/link";
+import Tamanho from "../Tamanho/tamanho";
 
 const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
     const [favorites, setFavorites] = useState(false);
+    const [visibleTamanho, setVisibleTamanho] = useState(false);
 
     if (product) {
         return (
             <>
-                <Text className={"absolute left-[15%]"}>Paquetá &gt; <span className="font-bold text-orange-100">{name}</span></Text>
-                <div className="flex items-center justify-evenly">
-                    <img src={image} />
-                    <div className="flex flex-col justify-around w-[500px] h-[500px]">
+                {
+                    visibleTamanho &&
+                    <Tamanho setVisibleTamanho={setVisibleTamanho} />
+                }
+                <Text className={"absolute text-center px-6 w-full xl:w-auto xl:left-[15%] xl:px-0"}>Paquetá &gt; <span className="font-bold text-orange-100">{name}</span></Text>
+                <div className="flex items-center justify-evenly flex-col xl:flex-row">
+                    <img className="w-[400px] md:w-auto" src={image} />
+                    <div className="flex flex-col justify-around w-[85%] sm:w-[70%] h-[500px] xl:w-[500px]">
                         <div>
-                            <Heading className={"text-4xl font-montserrat"}>{name?.toUpperCase()}</Heading>
+                            <Heading className={"text-3xl font-montserrat sm:text-4xl"}>{name?.toUpperCase()}</Heading>
                             <Text className={"text-grey-500"}>Código do produto {id}</Text>
                         </div>
                         <div>
@@ -39,7 +45,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                         </div>
                         <div>
                             <Text className={"text-grey-500"}>Escolha a numeração:</Text>
-                            <div className="flex justify-between items-center py-3">
+                            <div className="flex justify-center items-center py-3 flex-wrap gap-5 sm:justify-between">
                                 <Number product number={34} />
                                 <Number product number={35} />
                                 <Number product number={36} />
@@ -48,7 +54,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                                 <Number product number={39} />
                                 <Number product number={40} />
                             </div>
-                            <div className="group w-[200px] flex mt-2 items-center duration-200 transition-colors rounded-md cursor-pointer justify-center py-2 hover:bg-orange-100">
+                            <div onClick={() => setVisibleTamanho(true)} className="group w-[200px] flex mt-2 items-center duration-200 transition-colors rounded-md cursor-pointer justify-center py-2 hover:bg-orange-100">
                                 <Text className={"text-black group-hover:text-white "}>Guia de tamanhos</Text>
                             </div>
                         </div>
@@ -61,7 +67,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
 
     else {
         return (  
-            <div className="group h-[550px] w-[330px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-md mt-2 relative font-montserrat">
+            <div className="group h-[550px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-md mt-2 relative font-montserrat">
                 <Link className="flex flex-col justify-center h-full p-6" href={`shoes/${id}`}>
                     {
                         soldout && 
@@ -81,7 +87,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                     >
                         <Heart weight={favorites ? "fill" : "regular"} size={30} className="float-right" color="#FF8A29"/>
                     </div>
-                    <img className="group-hover:scale-[1.3] duration-500 ease-out object-cover h-[220px] block m-[0_auto]" src={image} alt={name} />
+                    <img className="group-hover:scale-[1.3] duration-500 ease-out object-cover h-[260px] block m-[0_auto] lg:h-[220px]" src={image} alt={name} />
                     <Text className={"text-lg my-3"}>{name?.toUpperCase()}</Text>
                     <div className="my-2">
                         <Heading className={"text-xl !font-poppins"}>R$ {price.value}</Heading>
@@ -89,9 +95,9 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                     </div>
                     {
                         soldout == false ?
-                        <Button className="w-[85%] my-3 text-lg bottom-4 left-[50%] -translate-x-[50%] absolute">COMPRAR</Button>
+                        <Button className="w-[85%] my-3 bottom-4 left-[50%] -translate-x-[50%] absolute">COMPRAR</Button>
                         :
-                        <Button soldOut className="w-[85%] my-3 text-lg bottom-4 left-[50%] -translate-x-[50%] absolute">ME AVISE QUANDO CHEGAR</Button>
+                        <Button soldOut className="w-[85%] my-3 bottom-4 left-[50%] -translate-x-[50%] absolute">ME AVISE QUANDO CHEGAR</Button>
                     }
                 </Link>
             </div>

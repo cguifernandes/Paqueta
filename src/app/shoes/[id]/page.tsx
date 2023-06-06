@@ -13,7 +13,7 @@ export async function generateMetadata ({params}: ParamsProps): Promise<Metadata
 export const Shoes = ({params} : ParamsProps) => {
     
     return (  
-        <div className="flex items-center justify-around flex-col py-24">
+        <div className="flex items-center justify-around flex-col py-20">
             <Product params={params} />
         </div>
     );
