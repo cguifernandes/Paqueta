@@ -32,7 +32,8 @@ export type SociaisProps = {
 
 export type ParamsProps = {
     params: {
-        id: string
+        id: string | never
+        x: string
     }
 }
 
