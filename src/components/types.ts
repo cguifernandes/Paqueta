@@ -30,13 +30,6 @@ export type SociaisProps = {
     className?: string
 }
 
-export type ParamsProps = {
-    params: {
-        id: string | never
-        x: string
-    }
-}
-
 export type ButtonProps = {
     children: ReactNode
     width?: number

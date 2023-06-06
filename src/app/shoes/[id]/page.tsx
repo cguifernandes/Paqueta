@@ -1,4 +1,3 @@
-import { ParamsProps } from "@/components/types";
 import Product from "@/components/Cards/product";
 import { Metadata } from "next";
 
