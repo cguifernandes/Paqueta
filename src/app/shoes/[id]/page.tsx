@@ -9,7 +9,7 @@ export async function generateMetadata ({params}: any): Promise<Metadata> {
     }
 }
 
-export const Shoes = ({params} : any) => {
+const Shoes = ({params} : any) => {
     return (  
         <div className="flex items-center justify-around flex-col py-20">
             <Product params={params} />
