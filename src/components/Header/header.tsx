@@ -43,7 +43,7 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-            <div className="grid grid-cols-2 text-center gap-y-8 py-4 w-full sm:flex sm:justify-evenly lg:justify-between lg:px-[12.5%]">
+            <div className="grid grid-cols-2 text-center gap-y-8 py-4 w-full border-b-2 sm:flex sm:justify-evenly lg:justify-between lg:px-[12.5%]">
                 <Text className={'cursor-pointer hover:text-black/60'}>Novidades</Text>
                 <Text className={'cursor-pointer hover:text-black/60'}>Feminino</Text>
                 <Text className={'cursor-pointer hover:text-black/60'}>Masculino</Text>

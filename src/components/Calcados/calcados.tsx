@@ -10,7 +10,7 @@ const Calcados = () => {
 
     return (  
         <div className="flex flex-col py-[80px] gap-y-[80px]">
-            <motion.div animate={onHoverFemale ? "enter" : "leave"} transition={{type: 'spring'}} className="flex flex-col gap-y-4 justify-evenly items-center lg:gap-y-0 lg:flex-row">
+            <motion.div animate={onHoverFemale ? "enter" : "leave"} transition={{type: 'spring'}} className="flex flex-col gap-y-4 justify-evenly items-center px-6 lg:gap-y-0 lg:flex-row">
                 <div  
                     onMouseEnter={() => setOnHoverFemale(true)} 
                     onMouseLeave={() => setOnHoverFemale(false)} 
@@ -30,7 +30,7 @@ const Calcados = () => {
                     <Button className="mt-8 block m-[0_auto] lg:float-right" width={285}>CONFERIR</Button>
                 </div>
             </motion.div>
-            <motion.div animate={onHoverMale ? "enter" : "leave"} transition={{type: 'spring'}} className="flex flex-col gap-y-4 justify-evenly items-center lg:gap-y-0 lg:flex-row">
+            <motion.div animate={onHoverMale ? "enter" : "leave"} transition={{type: 'spring'}} className="flex flex-col gap-y-4 justify-evenly px-6 items-center lg:gap-y-0 lg:flex-row">
                 <div className="md:w-[630px] px-8 order-last lg:-order-last">
                     <Text className={"text-xl text-center lg:text-left"}>Tenha em seu guarda roupa sapatos de qualidade e confortáveis, para o dia a dia, trabalho e até mesmo para praticar esportes!</Text>
                     <Button className="mt-8 block m-[0_auto] lg:float-left" width={285}>CONFERIR</Button>

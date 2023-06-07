@@ -8,6 +8,7 @@ import clsx from "clsx";
 import Number from "@/components/Number/number";
 import Link from "next/link";
 import Tamanho from "../Tamanho/tamanho";
+import Image from "next/image";
 
 const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
     const [favorites, setFavorites] = useState(false);
@@ -20,9 +21,9 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                     visibleTamanho &&
                     <Tamanho setVisibleTamanho={setVisibleTamanho} />
                 }
-                <Text className={"absolute text-center px-6 w-full xl:w-auto xl:left-[15%] xl:px-0"}>Paquetá &gt; <span className="font-bold text-orange-100">{name}</span></Text>
+                <Text className={"absolute text-center px-6 w-full text-lg xl:text-base xl:w-auto xl:left-[15%] xl:px-0"}>Paquetá &gt; <span className="font-bold text-orange-100">{name}</span></Text>
                 <div className="flex items-center justify-evenly flex-col xl:flex-row">
-                    <img className="w-[400px] md:w-auto" src={image} />
+                    <img className="w-[400px] md:w-[400px]" src={image} />
                     <div className="flex flex-col justify-around w-[85%] sm:w-[70%] h-[500px] xl:w-[500px]">
                         <div>
                             <Heading className={"text-3xl font-montserrat sm:text-4xl"}>{name?.toUpperCase()}</Heading>
@@ -40,7 +41,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                             }
                             <div className="pb-4">
                                 <Heading className={"text-3xl"}>R$ {price.discount != 0 ? (price.value - price.discount * price.value).toFixed(2) : price.value}</Heading>
-                                <Text className={"text-grey-500"}>OU EM 10X {Math.round(price.value / 10)}.99</Text>
+                                <Text className={"text-grey-500"}>OU EM 10X {Math.round((price.value - price.discount * price.value) / 10)}.99</Text>
                             </div>
                         </div>
                         <div>

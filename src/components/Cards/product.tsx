@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import { CardProps, ParamsProps } from "@/components/types";
+import { CardProps } from "@/components/types";
 import Text from "@/components/Text/text"
 import Heading from "@/components/Heading/heading";
 import Sociais from "@/components/Sociais/sociais";
@@ -14,7 +14,7 @@ const getData = async (id  : string) => {
     return response.json();
 }
 
-const Product = ({params} : ParamsProps) => {
+const Product = ({params} : any) => {
     const [shoes, setShoes] = useState<CardProps[] | null>(null);
     const [loading, setLoading] = useState(false);
 

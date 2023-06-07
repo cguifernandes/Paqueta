@@ -41,7 +41,7 @@ const Main = () => {
       <div className="py-[80px]">
         <div className="flex justify-between flex-col items-center pb-[50px] px-[12.5%] md:flex-row gap-y-4 md:gap-0">
           <div>
-            <img src={Logo.src} alt="Logo" /> 
+            <Image width={277} height={65} src={Logo.src} alt="Logo" /> 
             <Heading align="right" className={"text-orange-100 text-5xl"}>OUTLET</Heading>
           </div>
           <Text className={"text-xl text-center sm:w-[580px] md:pl-8 md:text-right"}>Você também pode escolher o seu novo sapato favorito de acordo com a sua numeração.</Text>
@@ -70,11 +70,11 @@ const Main = () => {
           <Cards />
         </div>
         <Heading className={"text-3xl px-[12.5%] py-10 font-montserrat"}>AS MELHORES MARCAS ESTÃO AQUI!</Heading>
-        <div className="flex flex-wrap gap-x-4 gap-y-8 items-center justify-center px-[12.5%] py-16 xl:flex-nowrap xl:justify-between">
-          <img src={Adidas.src} />
-          <img src={Bebece.src} />
-          <img src={Dumond.src} />
-          <img src={ViaMarte.src} />
+        <div className="flex flex-wrap gap-x-4 gap-y-8 justify-between items-center px-[12.5%] py-16 xl:flex-nowrap">
+          <Image height={87} width={128} src={Adidas.src} alt="Adidas logo" />
+          <Image height={58} width={213} src={Bebece.src} alt="Bebece logo" />
+          <Image height={47} width={232} src={Dumond.src} alt="Dumond logo" />
+          <Image height={36} width={276} src={ViaMarte.src} alt="Viamarte logo" />
         </div>
       </div>
     </>

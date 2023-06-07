@@ -5,7 +5,7 @@ import Group from "../Group/group";
 
 const Banner = () => {
     return (  
-        <div className="bg-gradient-to-r from-orange-100 to-orange-300 gap-5 py-6 px-4 flex flex-wrap justify-center xl:justify-evenly">
+        <div className="bg-gradient-to-r from-orange-100 to-orange-300 gap-5 py-8 px-4 flex flex-wrap justify-center xl:justify-evenly">
                 <Group 
                     weight="thin" 
                     size={64} 
