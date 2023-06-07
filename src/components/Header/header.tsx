@@ -4,6 +4,7 @@ import Text from "../Text/text";
 import Logo from "../../assets/logo.png"
 import clsx from "clsx";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
     return (  
@@ -23,7 +24,7 @@ const Header = () => {
             </div>
             <header className="flex items-center justify-around flex-col py-12 lg:flex-row">
                 <Link href={"/"}>
-                    <img src={Logo.src} alt="Logo" />
+                    <Image width={277} height={65} src={Logo.src} alt="Logo" /> 
                 </Link>
                 <div className="flex w-full mt-4 flex-col items-center px-4 justify-evenly sm:flex-row lg:mt-0 lg:w-auto lg:justify-normal">
                     <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer">
