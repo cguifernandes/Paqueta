@@ -36,33 +36,33 @@ const Product = ({params} : any) => {
                 loading ?
                 <>
                     <div className="w-full relative">
-                        <Text className={"absolute left-[15%] flex items-center -top-2"}>Paquetá &gt; <span className="pl-1"><Skeleton height={20} width={300} /></span></Text>
-                        <div className="flex items-center justify-evenly">
+                        <Text className={"absolute left-[50%] -translate-x-[50%] flex items-center w-[240px] sm:w-[387px] -top-2 xl:left-[25%] xl:w-auto"}>Paquetá &gt; <span className="pl-1"><Skeleton className="w-[150px] sm:w-[300px]" height={20} width={300} /></span></Text>
+                        <div className="flex items-center justify-evenly flex-col mt-8 xl:flex-row xl:mt-0">
                             <div>
-                                <Skeleton className="block m-[0_auto]" width={500} height={350} />
+                                <Skeleton className="block m-[0_auto] w-[90%]" width={500} height={350} />
                             </div>
-                            <div>
+                            <div className="w-[90%] sm:w-[70%] mt-4 xl:w-[500px]">
                                 <div>
-                                    <Skeleton className="my-2" width={500} height={40} />
-                                    <Skeleton className="my-2" width={500} height={20} />
+                                    <Skeleton className="my-2 w-[65%] xl:w-[400px]" width={500} height={40} />
+                                    <Skeleton className="my-2 w-[35%]" width={500} height={20} />
                                 </div>
                                 <div className="my-5">
-                                    <Skeleton className="my-4" width={100} height={20} />
+                                    <Skeleton className="my-4" width={200} height={20} />
                                     <Skeleton className="my-2" width={140} height={40} />
                                     <Skeleton width={120} height={10} />
                                 </div>
-                                <div>
+                                <div className="my-12">
                                     <Skeleton width={130} height={10} />
-                                    <Skeleton className="my-4" width={500} height={50} />
+                                    <Skeleton className="my-4 w-full" width={500} height={50} />
                                     <Skeleton width={110} height={10} />
                                 </div>
                                 <div>
-                                    <Skeleton className="my-4" width={500} height={50} />
+                                    <Skeleton className="my-4 w-full" width={500} height={50} />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="py-12 w-[69%]">
+                    <div className="py-12 w-[90%] sm:w-[70%] xl:w-[69%]">
                         <Skeleton className="my-4" width={200} height={30} />
                         <Skeleton className="w-full" />
                     </div>

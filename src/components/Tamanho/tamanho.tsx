@@ -23,7 +23,7 @@ const Tamanho = ({ setVisibleTamanho } : TamanhoProps) => {
     return ( 
         <>
             <div onClick={() => setVisibleTamanho(false)} className="w-full h-full top-0 left-0 fixed z-40 bg-black/50"></div>
-            <div className="bg-white w-[95%] h-[810px] my-10 fixed z-50 left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] rounded-lg lg:w-[990px]">
+            <div className="bg-white w-[95%] h-[810px] my-10 fixed z-50 left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] rounded-lg sm:my-0 lg:w-[990px]">
                 <div onClick={() => setVisibleTamanho(false)} className="absolute right-5 top-5 p-2 rounded-full ease-in duration-150 cursor-pointer hover:bg-grey-800">
                     <X size={32} className="text-black" />
                 </div>
