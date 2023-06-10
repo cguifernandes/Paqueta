@@ -17,6 +17,7 @@ module.exports = {
         grey: {
           100: '#383838',
           500: 'rgba(56, 56, 56, 0.6)',
+          700: 'rgba(0, 0, 0, 0.2)',
           800: '#ebebeb'
         },
         
@@ -38,7 +39,7 @@ module.exports = {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif']
-      }
+      },
     },
   },
   plugins: [],

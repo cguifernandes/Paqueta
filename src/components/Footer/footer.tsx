@@ -21,7 +21,7 @@ import Sociais from "../Sociais/sociais";
 
 const Footer = () => {
     return ( 
-        <>
+        <footer>
             <div className="bg-gradient-to-r from-orange-100 to-orange-300 mt-28 flex py-12 items-center justify-between gap-y-4 gap-x-8 px-[7.5%] flex-col md:px-[10%] xl:flex-row xl:gap-0 2xl:px-[15%]">
                 <Heading className={"text-3xl text-white w-full text-center space-y-20 font-montserrat xl:text-left xl:w-[450px] 2xl:text-4xl"}>SEJA O PRIMEIRO A RECEBER NOSSAS OFERTAS E NOVIDADES EXCLUSIVAS!</Heading>
                 <div className="relative w-[160px] hidden 2xl:inline">
@@ -58,7 +58,7 @@ const Footer = () => {
                     <Button className="bg-[linear-gradient(122.71deg,_#F99500_53.34%,_#FFCD29_133.06%)] block m-[0_auto] xl:m-0" width={220}>QUERO RECEBER</Button>
                 </form>
             </div>
-            <footer className="bg-[rgba(56,_56,_56,_0.1)] flex justify-evenly items-center py-12 px-8 gap-x-8 gap-y-10 font-montserrat flex-wrap xl:px-0">
+            <div className="bg-[rgba(56,_56,_56,_0.1)] flex justify-evenly items-center py-12 px-8 gap-x-8 gap-y-10 font-montserrat flex-wrap xl:px-0">
                 <div className="flex flex-col justify-between items-start h-[330px] w-full md:w-auto">
                     <Heading className="text-xl">Institucional</Heading>
                     <Text className={"cursor-pointer duration-200 hover:text-black/60"}>Quem Somos</Text>
@@ -122,12 +122,12 @@ const Footer = () => {
                         <img src={Seguranca.src} />
                     </div>
                 </div>
-            </footer>
+            </div>
             <div className="w-full bg-[#383838] py-8 flex-col items-center gap-y-5 justify-center gap-x-7 flex md:flex-row">
                 <Text className={"text-lg text-white"}>UMA EMPRESA DO GRUPO </Text>
                 <img className="w-[265px] h-[59px]" src={FooterImagem.src} />
             </div>
-        </> 
+        </footer> 
     );
 }
  

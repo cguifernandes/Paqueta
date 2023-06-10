@@ -8,7 +8,6 @@ import clsx from "clsx";
 import Number from "@/components/Number/number";
 import Link from "next/link";
 import Tamanho from "../Tamanho/tamanho";
-import Image from "next/image";
 
 const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
     const [favorites, setFavorites] = useState(false);

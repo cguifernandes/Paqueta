@@ -19,7 +19,7 @@ const Calcados = () => {
                     <motion.div variants={{enter: { opacity: 1 }, leave: { opacity: 0 }}} className="bg-calcados-feminios-shadow rounded-lg w-[90%] md:w-[668px] h-[620px] lg:h-[520px] lg:w-[568px] xl:h-[620px] xl:w-[668px]">
                         <motion.p 
                             variants={{enter: { opacity: 1, translateX: "0px" }, leave: { opacity: 0, translateX: "20px" }}}  
-                            className={"absolute bottom-12 left-12 p text-5xl text-white leading-tight"}
+                            className={"absolute bottom-12 left-12 p text-4xl text-white leading-tight sm:text-5xl"}
                         >
                             CALÇADOS<br/> FEMININOS
                         </motion.p>
@@ -43,7 +43,7 @@ const Calcados = () => {
                     <motion.div variants={{enter: { opacity: 1 }, leave: { opacity: 0 }}} className="bg-calcados-masculinos-shadow rounded-lg w-[100%] md:w-[668px] h-[620px] lg:h-[520px] lg:w-[568px] xl:h-[620px] xl:w-[668px]">
                         <motion.p 
                             variants={{enter: { opacity: 1, translateX: "0px" }, leave: { opacity: 0, translateX: "20px" }}} 
-                            className={"absolute bottom-12 right-12 text-5xl text-white leading-tight"}>
+                            className={"absolute bottom-12 right-12 text-4xl text-white leading-tight sm:text-5xl"}>
                                 CALÇADOS<br/> MASCULINOS
                         </motion.p>
                     </motion.div>

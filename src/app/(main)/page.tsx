@@ -24,7 +24,7 @@ const Main = () => {
   return (  
     <>
       <div className="w-full relative">
-        <Image className="w-full object-cover" src={BannerHero} alt="Banner Hero"/>
+        <Image className="w-full h-[240px] object-cover md:h-auto" src={BannerHero} alt="Banner Hero"/>
         <div className="absolute right-[5%] -translate-y-[50%] top-[50%] hidden lg:inline">
           <Heading className={'text-5xl xl:text-7xl'}>Tênis Casual</Heading>
           <Heading className={'text-orange-200 text-5xl xl:text-3xl'}>Masculino</Heading>
@@ -62,15 +62,15 @@ const Main = () => {
         </div>
       </div>
       <div>
-        <div className="flex items-center justify-between px-[12.5%] py-10">
-          <Heading className={"text-3xl font-montserrat"}>DESTAQUES</Heading>
-          <Text className={"text-lg cursor-pointer font-montserrat hover:text-black/50"}>CONFERIR TUDO</Text>
+        <div className="flex items-center justify-between px-[12.5%] py-10 flex-wrap gap-y-5">
+          <Heading className={"text-3xl font-montserrat text-center w-full sm:text-left sm:w-auto"}>DESTAQUES</Heading>
+          <Text className={"text-lg cursor-pointer font-montserrat hover:text-black/50 text-center w-full sm:text-right sm:w-auto"}>CONFERIR TUDO</Text>
         </div>
-        <div className="px-[60px] md:px-[150px] lg:px-[120px]">
+        <div className="px-[40px] md:px-[150px] lg:px-[120px]">
           <Cards />
         </div>
         <Heading className={"text-3xl px-[12.5%] py-10 font-montserrat"}>AS MELHORES MARCAS ESTÃO AQUI!</Heading>
-        <div className="flex flex-wrap gap-x-4 gap-y-8 justify-between items-center px-[12.5%] py-16 xl:flex-nowrap">
+        <div className="flex flex-wrap gap-x-4 gap-y-12 justify-between items-center px-[12.5%] py-16 xl:flex-nowrap">
           <Image height={87} width={128} src={Adidas.src} alt="Adidas logo" />
           <Image height={58} width={213} src={Bebece.src} alt="Bebece logo" />
           <Image height={47} width={232} src={Dumond.src} alt="Dumond logo" />

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Header = () => {
     return (  
-        <>
+        <header>
             <div className="bg-gradient-to-r from-orange-100 to-orange-300 flex justify-around items-center py-6 flex-col gap-y-4 sm:flex-row">
                 <Text className={"text-white text-lg"}>Loja de Calçados e Moda On-line</Text>
                 <div className="flex flex-wrap justify-center gap-y-4">
@@ -22,7 +22,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <header className="flex items-center justify-around flex-col py-12 lg:flex-row">
+            <nav className="flex items-center justify-around flex-col py-12 lg:flex-row">
                 <Link href={"/"}>
                     <Image width={277} height={65} src={Logo.src} alt="Logo" /> 
                 </Link>
@@ -43,7 +43,7 @@ const Header = () => {
                         <Text className={"ease duration-200 group-hover:text-white"}>Entrar</Text>
                     </div>
                 </div>
-            </header>
+            </nav>
             <div className="grid grid-cols-2 text-center gap-y-8 py-4 w-full border-b-2 sm:flex sm:justify-evenly lg:justify-between lg:px-[12.5%]">
                 <Text className={'cursor-pointer hover:text-black/60'}>Novidades</Text>
                 <Text className={'cursor-pointer hover:text-black/60'}>Feminino</Text>
@@ -52,7 +52,7 @@ const Header = () => {
                 <Text className={'cursor-pointer hover:text-black/60'}>Outlet</Text>
                 <Text className={'cursor-pointer hover:text-black/60'}>Cashback</Text>
             </div>
-        </>
+        </header>
     );
 }
  
