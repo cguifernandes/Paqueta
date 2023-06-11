@@ -51,9 +51,15 @@ const Header = () => {
                             </div>
                         }
                     </div>
-                    <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer">
+                    <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer relative">
                         <Bag className="mx-2 fill-orange-100" size={32} color="#000" />
                         <Text>Sacola</Text>
+                        {
+                            GetStoraged('shopping').length > 0 &&
+                            <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
+                                <Text className={"text-white text-[12px]"}>{GetStoraged('shopping').length}</Text>
+                            </div>
+                        }
                     </div>
                     <div className={clsx(
                         "group ease duration-200 w-auto flex my-4 items-center justify-center lg:mx-6 py-2 px-4 cursor-pointer rounded-md",  

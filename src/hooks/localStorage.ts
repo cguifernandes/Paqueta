@@ -1,16 +1,23 @@
 export const SetStoraged = (key : string, id : string) => {
-    const favorites = GetStoraged(key);
-    favorites.push(id);
-    localStorage.setItem(key, JSON.stringify(favorites));
+    if (typeof localStorage !== 'undefined') {
+        const storageItems = GetStoraged(key);
+        storageItems.push(id);
+        localStorage.setItem(key, JSON.stringify(storageItems));
+    }
 };
 
 export const RemoveStoraged = (key : string, id : string) => {
-    const favorites = GetStoraged(key);
-    const updatedFavorites = favorites.filter((favoriteId : string) => favoriteId !== id);
-    localStorage.setItem(key, JSON.stringify(updatedFavorites));
+    if (typeof localStorage !== 'undefined') {
+        const storageItems = GetStoraged(key);
+        const updatedStorageItems = storageItems.filter((favoriteId : string) => favoriteId !== id);
+        localStorage.setItem(key, JSON.stringify(updatedStorageItems));
+    }
 };
 
 export const GetStoraged = (key : string) : string[] => {
-    const favorites = JSON.parse(localStorage.getItem(key) ?? '[]');
-    return favorites;
+    let storageItems = [""];
+    if (typeof localStorage !== 'undefined') {
+        storageItems = JSON.parse(localStorage.getItem(key) ?? '[]');
+    }
+    return storageItems;
 };
