@@ -1,10 +1,16 @@
-import { Dispatch, ReactNode, SetStateAction } from "react"
+import { ButtonHTMLAttributes, CSSProperties, Dispatch, MouseEventHandler, ReactNode, SetStateAction } from "react"
 
 export type TextProps = {
     children: ReactNode,
     size?: 'sm' | 'md' | 'lg',
     className?: String,
     align?: 'left' | 'center' | 'right'
+}
+
+export type ShoppingProps = {
+    soldout: boolean | undefined
+    id: string
+    products?: boolean
 }
 
 export type GroupProps = {
@@ -23,9 +29,10 @@ export type GroupProps = {
 }
 
 export type FavoriteProps = {
-    soldout: boolean | undefined,
+    soldout?: boolean | undefined,
     className?: string,
-    id: string
+    id: string,
+    style?: CSSProperties | undefined
 }
 
 export type TamanhoProps = {
@@ -36,11 +43,11 @@ export type SociaisProps = {
     className?: string
 }
 
-export type ButtonProps = {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     children: ReactNode
     width?: number
     className?: string
-    soldOut?: boolean
+    soldOut?: boolean,
 }
 
 export type NumberProps = {

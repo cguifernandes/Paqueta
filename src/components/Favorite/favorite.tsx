@@ -5,7 +5,7 @@ import { FavoriteProps } from "../types";
 import { GetStoraged, RemoveStoraged, SetStoraged } from "@/hooks/localStorage";
 import { Toast } from "@/hooks/toast";
 
-const Favorite = ({id, soldout, className} : FavoriteProps) => {
+const Favorite = ({id, className, style} : FavoriteProps) => {
     const [isFavorite, setIsFavorite] = useState(false);
     const includesFavorites = GetStoraged("favorites");
     
@@ -13,28 +13,26 @@ const Favorite = ({id, soldout, className} : FavoriteProps) => {
         setIsFavorite(includesFavorites.includes(id));
     }, [includesFavorites])
 
-    const handlerFavorite = () => {
+    const handlerClick = () => {
         if (isFavorite) {
             RemoveStoraged("favorites", id);
             setIsFavorite(false);
-            Toast("Produto foi removido dos favoritos.", false);
+            Toast("O produto foi removido dos favoritos.", false);
         } 
         else {
             SetStoraged("favorites", id);
             setIsFavorite(true);
-            Toast("Produto foi adicionado aos favoritos.", true);
+            Toast("O produto foi adicionado aos favoritos.", true);
         }
     }
 
     return (  
         <div 
-            onClick={handlerFavorite} 
+            style={style}
+            onClick={handlerClick} 
             className={clsx(
                 "w-[45px] h-[45px] duration-200 cursor-pointer rounded-full flex z-30 items-center justify-center hover:bg-grey-800",
-                soldout == false ?
-                "top-6"
-                :
-                "top-12",
+                
                 className
             )}
         >

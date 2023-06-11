@@ -78,6 +78,7 @@ const Product = ({params} : any) => {
                                         product
                                         price={shoes.price}
                                         id={shoes.id}
+                                        soldout={shoes.soldout}
                                         image={shoes.image}
                                         name={shoes.name}
                                     />
