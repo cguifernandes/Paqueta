@@ -22,6 +22,12 @@ export type GroupProps = {
     className?: string
 }
 
+export type FavoriteProps = {
+    soldout: boolean | undefined,
+    className?: string,
+    id: string
+}
+
 export type TamanhoProps = {
     setVisibleTamanho: Dispatch<SetStateAction<boolean>>
 }

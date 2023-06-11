@@ -94,8 +94,8 @@ const Product = ({params} : any) => {
                             shoes?.map((shoes, index) => {
                                 return (
                                     <>
-                                        <Heading className={"text-2xl font-montserrat py-3"}>DESCRIÇÃO DO PRODUTO</Heading>
-                                        <Text className={"text-grey-500 text-lg"} key={index}>{shoes.description}</Text>
+                                        <Heading key={index} className={"text-2xl font-montserrat py-3"}>DESCRIÇÃO DO PRODUTO</Heading>
+                                        <Text className={"text-grey-500 text-lg"}>{shoes.description}</Text>
                                     </>
                                 )
                             })

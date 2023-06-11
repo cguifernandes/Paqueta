@@ -5,8 +5,22 @@ import Logo from "../../assets/logo.png"
 import clsx from "clsx";
 import Link from "next/link";
 import Image from "next/image";
+import { GetStoraged } from "@/hooks/localStorage";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+    const [favorites, setFavorites] = useState<string[]>([]);
+    const [favoritesLength, setFavoritesLength] = useState(0);
+
+    useEffect(() => {
+        setFavorites(GetStoraged('favorites'));
+    }, []);
+  
+    useEffect(() => {
+        setFavoritesLength(favorites.length);
+    }, []);
+
+
     return (  
         <header>
             <div className="bg-gradient-to-r from-orange-100 to-orange-300 flex justify-around items-center py-6 flex-col gap-y-4 sm:flex-row">
@@ -27,9 +41,15 @@ const Header = () => {
                     <Image width={277} height={65} src={Logo.src} alt="Logo" /> 
                 </Link>
                 <div className="flex w-full mt-4 flex-col items-center px-4 justify-evenly sm:flex-row lg:mt-0 lg:w-auto lg:justify-normal">
-                    <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer">
+                    <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer relative">
                         <HeartStraight className="mx-2" size={32} color="#000" />
                         <Text>Lista de desejos</Text>
+                        {
+                            GetStoraged('favorites').length > 0 &&
+                            <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
+                                <Text className={"text-white text-[12px]"}>{GetStoraged('favorites').length}</Text>
+                            </div>
+                        }
                     </div>
                     <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer">
                         <Bag className="mx-2 fill-orange-100" size={32} color="#000" />

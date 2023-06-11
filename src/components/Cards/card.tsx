@@ -8,9 +8,9 @@ import clsx from "clsx";
 import Number from "@/components/Number/number";
 import Link from "next/link";
 import Tamanho from "../Tamanho/tamanho";
+import Favorite from "../Favorite/favorite";
 
 const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
-    const [favorites, setFavorites] = useState(false);
     const [visibleTamanho, setVisibleTamanho] = useState(false);
 
     if (product) {
@@ -20,7 +20,10 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                     visibleTamanho &&
                     <Tamanho setVisibleTamanho={setVisibleTamanho} />
                 }
-                <Text className={"absolute text-center px-6 w-full text-lg xl:text-base xl:w-auto xl:left-[15%] xl:px-0"}>Paquetá &gt; <span className="font-bold text-orange-100">{name}</span></Text>
+                <div className="absolute w-full px-4 left-[50%] -translate-x-[50%] -top-6 flex items-center justify-between xl:w-[70%] sm:px-0 sm:w-[70%]">
+                    <Text className={"text-lg xl:text-base"}>Paquetá &gt; <span className="font-bold text-orange-100">{name}</span></Text>
+                    <Favorite className="ml-4 sm:ml-0" id={id} soldout={soldout} />
+                </div>
                 <div className="flex items-center justify-evenly flex-col xl:flex-row">
                     <img className="w-[400px] md:w-[400px]" src={image} />
                     <div className="flex flex-col justify-around w-[85%] sm:w-[70%] h-[500px] xl:w-[500px]">
@@ -68,6 +71,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
     else {
         return (  
             <div className="group h-[550px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-md mt-2 relative font-montserrat">
+                <Favorite className="absolute right-6" id={id} soldout={soldout} />
                 <Link className="flex flex-col justify-center h-full p-6" href={`shoes/${id}`}>
                     {
                         soldout && 
@@ -75,18 +79,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                             <Heading align="center" className={"text-white py-2 text-lg"}>PRODUTO ESGOTADO</Heading>
                         </div>
                     }
-                    <div 
-                        onClick={() => setFavorites(!favorites)} 
-                        className={clsx(
-                            "w-[45px] h-[45px] duration-200 cursor-pointer rounded-full absolute right-6 z-10 flex items-center justify-center hover:bg-grey-800",
-                            soldout == false ?
-                            "top-6"
-                            :
-                            "top-12"
-                        )}
-                    >
-                        <Heart weight={favorites ? "fill" : "regular"} size={30} className="float-right" color="#FF8A29"/>
-                    </div>
+                    
                     <img className="group-hover:scale-[1.3] duration-500 ease-out object-cover h-[260px] block m-[0_auto] lg:h-[220px]" src={image} alt={name} />
                     <Text className={"text-lg my-3"}>{name?.toUpperCase()}</Text>
                     <div className="my-2">

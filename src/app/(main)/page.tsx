@@ -13,7 +13,6 @@ import Cards from "@/components/Cards/cards";
 import Image from "next/image";
 import Calcados from "@/components/Calcados/calcados";
 
-
 export const metadata = {
   title: "Paquetá | Home",
 }

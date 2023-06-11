@@ -18,8 +18,6 @@ const Tamanho = ({ setVisibleTamanho } : TamanhoProps) => {
         })
     ]
 
-    console.log(data)
-
     return ( 
         <>
             <div onClick={() => setVisibleTamanho(false)} className="w-full h-full top-0 left-0 fixed z-40 bg-black/50"></div>
@@ -61,7 +59,7 @@ const Tamanho = ({ setVisibleTamanho } : TamanhoProps) => {
                             {
                                 data[0].map(response => {
                                     return (
-                                        <div key={response.length} className="flex justify-around border-b border-grey-700 py-2 items-center last:border-b-0">
+                                        <div key={response.length} className="flex justify-around lg:justify-between border-b border-grey-700 py-2 items-center last:border-b-0">
                                             <p className="font-bold lg:pl-[105px]">{response.number}</p>
                                             <p className="lg:pr-[75px]">{response.length}</p>
                                         </div>
