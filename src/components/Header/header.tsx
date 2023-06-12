@@ -5,20 +5,31 @@ import Logo from "../../assets/logo.png"
 import clsx from "clsx";
 import Link from "next/link";
 import Image from "next/image";
-import { GetStoraged } from "@/hooks/localStorage";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { StoragedContext } from "@/hooks/localStorage";
+import { CardProps } from "../types";
+
+const getData = async (id: string) => {
+    const response = await fetch(`https://api.brchallenges.com/api/paqueta/shoe/${id}`);
+
+    return response.json();
+}
 
 const Header = () => {
-    const [favorites, setFavorites] = useState<string[]>([]);
-    const [favoritesLength, setFavoritesLength] = useState(0);
+    const { GetStoraged } = useContext(StoragedContext);
+    const [favorites, setFavorites] = useState<CardProps[] | null>(null);
+    const items = GetStoraged('favorites');
 
     useEffect(() => {
-        setFavorites(GetStoraged('favorites'));
-    }, []);
-  
-    useEffect(() => {
-        setFavoritesLength(favorites.length);
-    }, []);
+        const fetchFavorites = async () => {
+            if (items.length > 0) {
+                const favoritesData = await Promise.all(items.map(async (item) => await getData(item)));
+                setFavorites(favoritesData);
+            }
+        };
+      
+        fetchFavorites();
+    }, [items]);
 
 
     return (  
@@ -45,11 +56,11 @@ const Header = () => {
                         <HeartStraight className="mx-2" size={32} color="#000" />
                         <Text>Lista de desejos</Text>
                         {
-                            GetStoraged('favorites').length > 0 &&
+                            favorites && favorites.length > 0 && (
                             <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
-                                <Text className={"text-white text-[12px]"}>{GetStoraged('favorites').length}</Text>
+                                <Text className="text-white text-[12px]">{favorites.length}</Text>
                             </div>
-                        }
+                        )}
                     </div>
                     <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer relative">
                         <Bag className="mx-2 fill-orange-100" size={32} color="#000" />

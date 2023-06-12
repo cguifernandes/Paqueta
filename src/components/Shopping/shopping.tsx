@@ -1,12 +1,13 @@
 'use client'
 import Button from "../Button/button";
 import { ShoppingProps } from "../types";
-import { useEffect, useState } from "react";
-import { GetStoraged, RemoveStoraged, SetStoraged } from "@/hooks/localStorage";
+import { useContext, useEffect, useState } from "react";
 import { Toast } from "@/hooks/toast";
+import { StoragedContext } from "@/hooks/localStorage";
 
 const Shopping = ({ soldout, id, products } : ShoppingProps) => {
     const [isOnShopping, setIsOnShopping] = useState(false);
+    const { GetStoraged, RemoveStoraged, SetStoraged } = useContext(StoragedContext);
     const includesShopping = GetStoraged("shopping");
     
     useEffect(() => {

@@ -1,14 +1,16 @@
+'use client'
 import clsx from "clsx";
 import { Heart } from "phosphor-react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FavoriteProps } from "../types";
-import { GetStoraged, RemoveStoraged, SetStoraged } from "@/hooks/localStorage";
 import { Toast } from "@/hooks/toast";
+import { StoragedContext } from "@/hooks/localStorage";
 
 const Favorite = ({id, className, style} : FavoriteProps) => {
     const [isFavorite, setIsFavorite] = useState(false);
+    const { GetStoraged, RemoveStoraged, SetStoraged } = useContext(StoragedContext);
     const includesFavorites = GetStoraged("favorites");
-    
+        
     useEffect(() => {
         setIsFavorite(includesFavorites.includes(id));
     }, [includesFavorites])

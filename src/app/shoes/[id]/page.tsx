@@ -10,7 +10,6 @@ export async function generateMetadata ({params}: any): Promise<Metadata> {
 }
 
 const Shoes = ({params} : any) => {
-
     return (  
         <>
             <div className="flex items-center justify-around flex-col py-20">
