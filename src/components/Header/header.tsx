@@ -5,33 +5,10 @@ import Logo from "../../assets/logo.png"
 import clsx from "clsx";
 import Link from "next/link";
 import Image from "next/image";
-import { useContext, useEffect, useState } from "react";
-import { StoragedContext } from "@/hooks/localStorage";
-import { CardProps } from "../types";
-
-const getData = async (id: string) => {
-    const response = await fetch(`https://api.brchallenges.com/api/paqueta/shoe/${id}`);
-
-    return response.json();
-}
+import Favorites from "../Favorite/favorites";
+import Shopping from "../Shopping/shopping";
 
 const Header = () => {
-    const { GetStoraged } = useContext(StoragedContext);
-    const [favorites, setFavorites] = useState<CardProps[] | null>(null);
-    const items = GetStoraged('favorites');
-
-    useEffect(() => {
-        const fetchFavorites = async () => {
-            if (items.length > 0) {
-                const favoritesData = await Promise.all(items.map(async (item) => await getData(item)));
-                setFavorites(favoritesData);
-            }
-        };
-      
-        fetchFavorites();
-    }, [items]);
-
-
     return (  
         <header>
             <div className="bg-gradient-to-r from-orange-100 to-orange-300 flex justify-around items-center py-6 flex-col gap-y-4 sm:flex-row">
@@ -53,24 +30,10 @@ const Header = () => {
                 </Link>
                 <div className="flex w-full mt-4 flex-col items-center px-4 justify-evenly sm:flex-row lg:mt-0 lg:w-auto lg:justify-normal">
                     <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer relative">
-                        <HeartStraight className="mx-2" size={32} color="#000" />
-                        <Text>Lista de desejos</Text>
-                        {
-                            favorites && favorites.length > 0 && (
-                            <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
-                                <Text className="text-white text-[12px]">{favorites.length}</Text>
-                            </div>
-                        )}
+                        <Favorites />
                     </div>
                     <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer relative">
-                        <Bag className="mx-2 fill-orange-100" size={32} color="#000" />
-                        <Text>Sacola</Text>
-                        {
-                            GetStoraged('shopping').length > 0 &&
-                            <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
-                                <Text className={"text-white text-[12px]"}>{GetStoraged('shopping').length}</Text>
-                            </div>
-                        }
+                        <Shopping />
                     </div>
                     <div className={clsx(
                         "group ease duration-200 w-auto flex my-4 items-center justify-center lg:mx-6 py-2 px-4 cursor-pointer rounded-md",  

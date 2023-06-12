@@ -1,5 +1,5 @@
 'use client'
-import { Bag } from "phosphor-react";
+import { HeartStraight } from "phosphor-react";
 import Text from "../Text/text";
 import { useContext, useEffect, useState } from "react";
 import { StoragedContext } from "@/hooks/localStorage";
@@ -11,33 +11,33 @@ const getData = async (id: string) => {
     return response.json();
 }
 
-const Shopping = () => {
+const Favorites = () => {
     const { GetStoraged } = useContext(StoragedContext);
-    const [shopping, setShopping] = useState<CardProps[] | null>(null);
-    const items = GetStoraged('shopping');
+    const [favorites, setFavorites] = useState<CardProps[] | null>(null);
+    const items = GetStoraged('favorites');
 
     useEffect(() => {
-        const fetchShopping = async () => {
+        const fetchFavorites = async () => {
             if (items.length > 0) {
                 const favoritesData = await Promise.all(items.map(async (item) => await getData(item)));
-                setShopping(favoritesData);
+                setFavorites(favoritesData);
             }
         };
       
-        fetchShopping();
+        fetchFavorites();
     }, [items]);
-
+    
     return (
-        <>
-            <Bag className="mx-2 fill-orange-100" size={32} color="#000" />
-            <Text>Sacola</Text>
-            {shopping && shopping.length > 0 && (
+      <>
+            <HeartStraight className="mx-2" size={32} color="#000" />
+            <Text>Lista de desejos</Text>
+            {favorites && favorites.length > 0 && (
                 <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
-                    <Text className="text-white text-[12px]">{shopping.length}</Text>
+                    <Text className="text-white text-[12px]">{favorites.length}</Text>
                 </div>
             )}
-        </>
+      </>
     );
 }
  
-export default Shopping;
+export default Favorites;

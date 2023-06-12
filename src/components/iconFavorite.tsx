@@ -2,11 +2,11 @@
 import clsx from "clsx";
 import { Heart } from "phosphor-react";
 import { useContext, useEffect, useState } from "react";
-import { FavoriteProps } from "../types";
+import { FavoriteProps } from "@/components/types";
 import { Toast } from "@/hooks/toast";
 import { StoragedContext } from "@/hooks/localStorage";
 
-const Favorite = ({id, className, style} : FavoriteProps) => {
+const Icon = ({id, className, style} : FavoriteProps) => {
     const [isFavorite, setIsFavorite] = useState(false);
     const { GetStoraged, RemoveStoraged, SetStoraged } = useContext(StoragedContext);
     const includesFavorites = GetStoraged("favorites");
@@ -43,4 +43,4 @@ const Favorite = ({id, className, style} : FavoriteProps) => {
     );
 }
  
-export default Favorite;
+export default Icon;

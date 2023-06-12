@@ -1,13 +1,12 @@
 import { CardProps } from "../types";
 import Text from "../Text/text";
 import Heading from "../Heading/heading";
-import Button from "../Button/button";
 import { useState } from "react";
 import Number from "@/components/Number/number";
 import Link from "next/link";
 import Tamanho from "../Tamanho/tamanho";
-import Favorite from "../Favorite/favorite";
-import Shopping from "../Shopping/shopping";
+import Icon from "../iconFavorite";
+import ButtonShopping from "../buttonShopping";
 
 const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
     const [visibleTamanho, setVisibleTamanho] = useState(false);
@@ -23,7 +22,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                 <div className="flex items-center justify-evenly flex-col xl:flex-row">
                     <img className="w-[400px] md:w-[400px]" src={image} />
                     <div className="flex flex-col justify-around w-[85%] sm:w-[70%] min-h-[550px] xl:w-[500px]">
-                        <Favorite id={id} />
+                        <Icon id={id} />
                         <div>
                             <Heading className={"text-3xl font-montserrat sm:text-4xl"}>{name?.toUpperCase()}</Heading>
                             <Text className={"text-grey-500"}>Código do produto {id}</Text>
@@ -58,7 +57,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                                 <Text className={"text-black group-hover:text-white "}>Guia de tamanhos</Text>
                             </div>
                         </div>
-                        <Shopping id={id} soldout={soldout} products={true} />
+                        <ButtonShopping id={id} soldout={soldout} products={true} />
                     </div>
                 </div>
             </>
@@ -68,7 +67,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
     else {
         return (  
             <div className="group h-[550px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-md mt-2 relative font-montserrat">
-                <Favorite className="absolute right-6" style={!soldout ? {top: "24px"} : {top: "48px"}} id={id} />
+                <Icon className="absolute right-6" style={!soldout ? {top: "24px"} : {top: "48px"}} id={id} />
                 <Link className="flex flex-col justify-center h-full p-6 items-center" href={`shoes/${id}`}>
                     {
                         soldout && 
@@ -86,7 +85,7 @@ const Card = ({ price, image, name, soldout, id, product } : CardProps) => {
                         </div>
                     </div>
                 </Link>
-                <Shopping id={id} soldout={soldout} />
+                <ButtonShopping id={id} soldout={soldout} />
             </div>
         );
     }
