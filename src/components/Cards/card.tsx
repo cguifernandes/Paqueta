@@ -9,7 +9,6 @@ import Link from "next/link";
 import Tamanho from "../Tamanho/tamanho";
 import Icon from "../iconFavorite";
 import ButtonShopping from "../buttonShopping";
-import Image from "next/image";
 import { Trash } from "phosphor-react";
 import Skeleton from "../Skeleton/skeleton";
 

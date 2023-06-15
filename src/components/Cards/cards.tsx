@@ -1,5 +1,5 @@
 'use client'
-import { SetStateAction, useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import { CardProps } from "../types";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar, Autoplay } from 'swiper';
