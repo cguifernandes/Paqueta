@@ -22,7 +22,7 @@ const Main = () => {
   return (  
     <>
       <div className="w-full relative">
-        <Image className="w-full h-[240px] object-cover md:h-auto" src={BannerHero} alt="Banner Hero"/>
+        <img className="w-full h-[240px] object-cover md:h-auto" src={BannerHero.src} alt="Banner Hero"/>
         <div className="absolute right-[5%] -translate-y-[50%] top-[50%] hidden lg:inline">
           <Heading className={'text-5xl xl:text-7xl'}>Tênis Casual</Heading>
           <Heading className={'text-orange-200 text-5xl xl:text-3xl'}>Masculino</Heading>

@@ -22,26 +22,22 @@ export const CartCard = () => {
     const { GetStoraged, RemoveStoraged } = useContext(StoragedContext);
     const [shopping, setShopping] = useState<CardProps[] | null>(null);
     const [isLoading, setIsLoading] = useState(true);
-    const items = GetStoraged('shopping');
+    const items = GetStoraged("shopping");
     
     useEffect(() => {
-        const fetchShopping = async () => {
-            const Fetch = async () => {
-                if (items.length > 0) {
-                    const dataCard = [];
-                    for (let i = 0; i < items.length; i++) {
-                        const data = await getData(items[i]);
-                        dataCard.push(data);
-                    }
-                    setShopping(dataCard.flat());
+        const Fetch = async () => {
+            if (items.length > 0) {
+                const dataCard = [];
+                for (let i = 0; i < items.length; i++) {
+                    const data = await getData(items[i]);
+                    dataCard.push(data);
                 }
-                setIsLoading(false);
-            };
-            
-            Fetch();
+                setShopping(dataCard.flat());
+            }
+            setIsLoading(false);
         };
         
-        fetchShopping();
+        Fetch();
     }, [items]);
 
     if (isLoading) {
@@ -58,8 +54,8 @@ export const CartCard = () => {
         <>
             {
                 items.length == 0 ?
-                <div className="mt-[115px] w-[70%] rounded-lg flex flex-col items-center">
-                    <Text className={"text-xl"}>Você não tem nenhum item na sacola de compras.</Text>
+                <div className="mt-[155px] rounded-lg flex flex-col items-center px-6">
+                    <Text className={"text-lg"}>Você não tem nenhum item na sacola de compras.</Text>
                 </div>
                 :
                 <div className="bg-grey-300 mt-[115px] w-[90%] lg:w-[70%] rounded-lg flex flex-col items-center">
@@ -97,7 +93,7 @@ export const FavoriteCard = () => {
     const { GetStoraged, RemoveStoraged } = useContext(StoragedContext);
     const [favorites, setFavorites] = useState<CardProps[] | null>(null);
     const [isLoading, setIsLoading] = useState(true);
-    const items = GetStoraged('favorites');
+    const items = GetStoraged("favorites");
 
     useEffect(() => {
         const Fetch = async () => {
@@ -129,8 +125,8 @@ export const FavoriteCard = () => {
         <>
             {
                 items.length == 0 ?
-                <div className="mt-[115px] w-[70%] rounded-lg flex flex-col items-center">
-                    <Text className={"text-xl"}>Você não tem nenhum item como favorito.</Text>
+                <div className="mt-[155px] rounded-lg flex flex-col items-center px-6">
+                    <Text className={"text-lg"}>Você não tem nenhum item como favorito.</Text>
                 </div>
                 :
                 <div className="bg-grey-300 mt-[115px] w-[90%] lg:w-[70%] rounded-lg flex flex-col items-center">

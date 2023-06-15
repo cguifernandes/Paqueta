@@ -1,6 +1,5 @@
 'use client'
 import { HeartStraight } from "phosphor-react";
-import Text from "../Text/text";
 import { useContext, useEffect, useState } from "react";
 import { StoragedContext } from "@/hooks/localStorage";
 import { CardProps } from "../types";
@@ -27,20 +26,26 @@ const Favorites = () => {
                 }
                 setFavorites(dataCard.flat());
             }
+            else {
+                setFavorites(null)
+            }
         };
       
         Fetch();
     }, [items]);
 
+
+
     return (
-        <Link href={"favorites"} className="w-[175px] flex items-center justify-between">
+        <Link href={"favorites"} className="w-auto flex items-center justify-between">
             <HeartStraight className="mx-2" size={32} color="#000" />
-            <Text>Lista de desejos</Text>
+            <span>Favoritos</span>
             {
-                favorites?.length != null && 
-                <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
-                    <Text className="text-white text-[12px]">{favorites.length}</Text>
-                </div>
+                favorites && favorites.length > 0 && (
+                    <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
+                        <span className="text-white text-[12px]">{favorites?.length}</span>
+                    </div>
+                )
             }
         </Link>
     );
