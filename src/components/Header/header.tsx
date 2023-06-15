@@ -26,7 +26,7 @@ const Header = () => {
             </div>
             <nav className="flex items-center justify-around flex-col py-12 lg:flex-row">
                 <Link href={"/"}>
-                    <Image width={277} height={65} src={Logo.src} alt="Logo" /> 
+                    <Image quality={100} width={277} height={65} src={Logo.src} alt="Logo" /> 
                 </Link>
                 <div className="flex w-full mt-4 flex-col items-center px-4 justify-evenly sm:flex-row lg:mt-0 lg:w-auto lg:justify-normal">
                     <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer relative">
