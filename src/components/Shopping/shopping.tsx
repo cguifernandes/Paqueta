@@ -34,6 +34,8 @@ const Shopping = () => {
         fetchData();
     }, [items]);
 
+    console.log(items)
+
     return (
         <Link href="cart" className="w-auto flex items-center justify-between">
             <Bag className="mx-2 fill-orange-100" size={32} color="#000" />
