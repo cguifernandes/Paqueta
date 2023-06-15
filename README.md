@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Paquetá</h1>
 
-## Getting Started
+<div align="center">
+    <img src="https://github.com/cguifernandes/Paqueta/assets/88489337/359fb647-c077-4651-8d85-449d1f1dc204" width="850px"/>
+</div>
 
-First, run the development server:
+## Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+O Paquetá é um projeto de front-end que busca apresentar uma interface elegante e intuitiva para uma loja virtual de calçados. O desafio foi idealizado por <a href="https://www.leonardovargas.dev/">Leo Vargas</a>, com o objetivo de testar e aprimorar as habilidades de desenvolvimento front-end e para a base do design do projeto foi utilizado um <a href="https://www.figma.com/file/df5XIaBPlnvzkMNUxhLFpq/Paqueta---BrChallenges?type=design&node-id=0-1&t=KGQ0khUOCkIrIBtM-0">Figma</a> desenvolvido por <a href="https://www.linkedin.com/in/anamariawca/">Ana Maria Almeida</a>.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-  [TailwindCSS](https://tailwindcss.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+-  [Next.JS](https://nextjs.org/)
 
-## Learn More
+-  [TypeScript](https://www.typescriptlang.org/)
 
-To learn more about Next.js, take a look at the following resources:
+-  [Framer Motion](https://www.framer.com/motion/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-  [React Hot Toast](https://react-hot-toast.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-  [Swiper](https://swiperjs.com/)
 
-## Deploy on Vercel
+## Instruções de Uso
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Comece clonando o repositório do projeto para sua máquina local. Você pode fazer isso usando o comando git clone seguido pelo URL do repositório.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Acesse o diretório do projeto clonado e execute o comando <strong>npm install</strong> ou <strong>yarn install</strong> para instalar todas as dependências necessárias do projeto. Certifique-se de ter o Node.js e o npm (ou yarn) instalados em seu sistema.
+
+3. Após a instalação das dependências, execute o comando <strong>npm run dev</strong> ou <strong>yarn dev</strong> no terminal dentro do diretório do projeto. Isso iniciará o servidor de desenvolvimento do Next.js e você poderá acessar o projeto no navegador através do endereço http://localhost:3000 (a menos que especificado de outra forma).
+
+## Autor
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/cguifernandes">
+        <img src="https://avatars.githubusercontent.com/u/88489337?s=400&u=a2bec996eaf90a1f34fc0ab909f54df0ab065659&v=4" width="100px;" alt="Minha foto no GitHub"/><br>
+        <sub>
+          <b>Guilherme Fernandes</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
