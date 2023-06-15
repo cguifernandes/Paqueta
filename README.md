@@ -1,7 +1,7 @@
 <h1 align="center">Paquetá</h1>
 
 <div align="center">
-    <img src="https://github.com/cguifernandes/Paqueta/assets/88489337/f60b8346-346c-4e3c-bbeb-36db0c7a97f9" width="850px"/>
+    <img src="https://github.com/cguifernandes/Paqueta/assets/88489337/359fb647-c077-4651-8d85-449d1f1dc204" width="850px"/>
 </div>
 
 ## Sobre o Projeto
