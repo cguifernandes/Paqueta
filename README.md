@@ -2,7 +2,6 @@
 
 <div align="center">
     <img src="https://github.com/cguifernandes/Paqueta/assets/88489337/f60b8346-346c-4e3c-bbeb-36db0c7a97f9" width="850px"/>
-    <h4 align="center"><a href="https://paqueta-three.vercel.app/">Clique para visitar o projeto</a></h4>
 </div>
 
 ## Sobre o Projeto
