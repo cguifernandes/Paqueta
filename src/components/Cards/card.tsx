@@ -46,10 +46,10 @@ export const CartCard = () => {
 
     if (isLoading) {
         return (
-            <div className="mt-[115px] w-[70%] flex flex-col gap-y-4">
-                <Skeleton className="w-full" height={300} />
-                <Skeleton className="w-full" height={300} />
-                <Skeleton className="w-full" height={300} />
+            <div className="mt-[115px] w-[90%] lg:w-[70%] flex flex-col gap-y-4">
+                <Skeleton className="w-full h-[630px] lg:h-[300px]" />
+                <Skeleton className="w-full h-[630px] lg:h-[300px]" />
+                <Skeleton className="w-full h-[630px] lg:h-[300px]" />
             </div>
         )
     }
@@ -67,11 +67,11 @@ export const CartCard = () => {
                         shopping?.map((shopping) => {
                             return (
                                 <div key={shopping.id}  className="w-[90%] relative border-b-2 last:border-b-0">
-                                    <div onClick={() => RemoveStoraged("shopping", shopping.id)} className="absolute right-2 bottom-12 rounded-full p-1 duration-300 cursor-pointer hover:bg-grey-700 ">
+                                    <div onClick={() => RemoveStoraged("shopping", shopping.id)} className="absolute right-6 bottom-6 lg:bottom-[20px] xl:bottom-[50px] rounded-full p-1 duration-300 cursor-pointer hover:bg-grey-700 ">
                                         <Trash size={32} />
                                     </div>
                                     <Link href={`shoes/${shopping.id}`} className="flex items-center justify-around flex-col py-10 lg:py-0 lg:flex-row" key={shopping.id}>
-                                        <img src={shopping.image} className="w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[350px] xl:h-[350px]" alt="Imagem do tênis" />
+                                        <img src={shopping.image} className="h-[300px] w-[300px] sm:w-[400px] sm:h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[350px] xl:h-[350px]" alt="Imagem do tênis" />
                                         <div className="w-full lg:w-[550px] lg:pl-8">
                                             <Heading className={"text-2xl w-full"}>{shopping.name}</Heading>
                                             <Text className={"text-grey-500 w-full"}>Código do produto {shopping.id}</Text>
@@ -117,10 +117,10 @@ export const FavoriteCard = () => {
 
     if (isLoading) {
         return (
-            <div className="mt-[115px] w-[70%] flex flex-col gap-y-4">
-                <Skeleton className="w-full" height={300} />
-                <Skeleton className="w-full" height={300} />
-                <Skeleton className="w-full" height={300} />
+            <div className="mt-[115px] w-[90%] lg:w-[70%] flex flex-col gap-y-4">
+                <Skeleton className="w-full h-[630px] lg:h-[300px]" />
+                <Skeleton className="w-full h-[630px] lg:h-[300px]" />
+                <Skeleton className="w-full h-[630px] lg:h-[300px]" />
             </div>
         )
     }
@@ -138,11 +138,11 @@ export const FavoriteCard = () => {
                         favorites?.map((favorites) => {
                             return (
                                 <div key={favorites.id}  className="w-[90%] relative border-b-2 last:border-b-0">
-                                    <div onClick={() => RemoveStoraged("favorites", favorites.id)} className="absolute right-2 bottom-12 rounded-full p-1 duration-300 cursor-pointer hover:bg-grey-700 ">
+                                    <div onClick={() => RemoveStoraged("favorites", favorites.id)} className="absolute right-6 bottom-6 lg:bottom-[20px] xl:bottom-[50px] rounded-full p-1 duration-300 cursor-pointer hover:bg-grey-700 ">
                                         <Trash size={32} />
                                     </div>
                                     <Link href={`shoes/${favorites.id}`} className="group flex items-center justify-around flex-col py-10 lg:py-0 lg:flex-row" key={favorites.id}>
-                                        <img src={favorites.image} className="w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[350px] xl:h-[350px]" alt="Imagem do tênis" />
+                                        <img src={favorites.image} className="h-[300px] w-[300px] sm:w-[400px] sm:h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[350px] xl:h-[350px]" alt="Imagem do tênis" />
                                         <div className="w-full lg:w-[550px] lg:pl-8">
                                             <Heading className={"text-2xl w-full"}>{favorites.name}</Heading>
                                             <Text className={"text-grey-500 w-full"}>Código do produto {favorites.id}</Text>

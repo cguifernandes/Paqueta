@@ -36,11 +36,12 @@ const Favorites = () => {
         <Link href={"favorites"} className="w-[175px] flex items-center justify-between">
             <HeartStraight className="mx-2" size={32} color="#000" />
             <Text>Lista de desejos</Text>
-            {favorites && favorites.length != null && (
+            {
+                favorites?.length != null && 
                 <div className="w-[20px] h-[20px] rounded-full flex items-center justify-center bg-orange-100 absolute left-0 -top-2">
                     <Text className="text-white text-[12px]">{favorites.length}</Text>
                 </div>
-            )}
+            }
         </Link>
     );
 }
