@@ -40,9 +40,9 @@ const Footer = () => {
                             <input className="pl-[45px] w-full bg-transparent py-2 outline-none text-white placeholder:text-white/60 xl:w-[300px]" type="text" placeholder="Maria da Silva" />
                         </div>
                     </div>
-                    <div className="flex justify-around py-8 flex-wrap lg:flex-nowrap">
+                    <div className="flex justify-around py-8 flex-wrap gap-y-3 lg:flex-nowrap">
                         <Text className={"text-white text-lg"}>Tenho interesse na categoria:</Text>
-                        <div className="flex items-center justify-between w-[340px]">
+                        <div className="flex items-center justify-evenly w-[340px]">
                             <label htmlFor="checkbox-1" className="cursor-pointer relative flex items-center justify-center">
                                 <input type="checkbox" id="checkbox-1" className="appearance-none h-6 w-6 bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]" />
                                 <Check weight="bold" size={22} color="#eb7718" className="absolute left-[1px] opacity-0 check-1 transition duration-75" />
