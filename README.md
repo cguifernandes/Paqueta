@@ -16,13 +16,19 @@ O Paquetá é um projeto de front-end que busca apresentar uma interface elegant
 
 -  [TypeScript](https://www.typescriptlang.org/)
 
+-  [Framer Motion](https://www.framer.com/motion/)
+
+-  [React Hot Toast](https://react-hot-toast.com/)
+
+-  [Swiper](https://swiperjs.com/)
+
 ## Instruções de Uso
 
-1. Clonar o repositório: Comece clonando o repositório do projeto para sua máquina local. Você pode fazer isso usando o comando git clone seguido pelo URL do repositório.
+1. Comece clonando o repositório do projeto para sua máquina local. Você pode fazer isso usando o comando git clone seguido pelo URL do repositório.
 
-2. Instalar as dependências: Acesse o diretório do projeto clonado e execute o comando npm install ou yarn install para instalar todas as dependências necessárias do projeto. Certifique-se de ter o Node.js e o npm (ou yarn) instalados em seu sistema.
+2. Acesse o diretório do projeto clonado e execute o comando <strong>npm install</strong> ou <strong>yarn install</strong> para instalar todas as dependências necessárias do projeto. Certifique-se de ter o Node.js e o npm (ou yarn) instalados em seu sistema.
 
-3. Executar o projeto localmente: Após a instalação das dependências, execute o comando npm run dev ou yarn dev no terminal dentro do diretório do projeto. Isso iniciará o servidor de desenvolvimento do Next.js e você poderá acessar o projeto no navegador através do endereço http://localhost:3000 (a menos que especificado de outra forma).
+3. Após a instalação das dependências, execute o comando <strong>npm run dev</strong> ou <strong>yarn dev</strong> no terminal dentro do diretório do projeto. Isso iniciará o servidor de desenvolvimento do Next.js e você poderá acessar o projeto no navegador através do endereço http://localhost:3000 (a menos que especificado de outra forma).
 
 ## Autor
 <table>
