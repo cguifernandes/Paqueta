@@ -4,7 +4,7 @@ import { CardProps } from "@/components/types";
 import Text from "@/components/Text/text"
 import Heading from "@/components/Heading/heading";
 import Sociais from "@/components/Sociais/sociais";
-import Card from "./card";
+import Card, { ProductCard } from "./card";
 import Cards from "./cards";
 import Skeleton from "../Skeleton/skeleton";
 
@@ -73,14 +73,12 @@ const Product = ({params} : any) => {
                         {
                             shoes?.map((shoes, index) => {
                                 return (
-                                    <Card 
-                                        key={index}
-                                        product
-                                        price={shoes.price}
+                                    <ProductCard
+                                        key={index} 
                                         id={shoes.id}
-                                        soldout={shoes.soldout}
                                         image={shoes.image}
                                         name={shoes.name}
+                                        price={shoes.price}
                                     />
                                 )
                             })

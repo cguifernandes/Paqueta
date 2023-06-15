@@ -2,6 +2,7 @@
 import Button from "@/components/Button/button";
 import Text from "@/components/Text/text";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 
 const Calcados = () => {
@@ -27,13 +28,17 @@ const Calcados = () => {
                 </div> 
                 <div className="md:w-[630px] px-8">
                     <Text className={"text-xl text-center lg:text-right"}>Escolher o seu sapato favorito entre nossa <span className="text-black font-medium">variedade de modelos e cores</span> não será uma tarefa fácil, mas o que uma mulher não consegue fazer?</Text>
-                    <Button className="mt-8 block m-[0_auto] lg:float-right" width={285}>CONFERIR</Button>
+                    <Link href={"#swiper"}>
+                        <Button className="mt-8 block m-[0_auto] lg:float-right" width={285}>CONFERIR</Button>
+                    </Link>
                 </div>
             </motion.div>
             <motion.div animate={onHoverMale ? "enter" : "leave"} transition={{type: 'spring'}} className="flex flex-col gap-y-4 justify-evenly px-6 items-center lg:gap-y-0 lg:flex-row">
                 <div className="md:w-[630px] px-8 order-last lg:-order-last">
                     <Text className={"text-xl text-center lg:text-left"}>Tenha em seu guarda roupa sapatos de qualidade e confortáveis, para o dia a dia, trabalho e até mesmo para praticar esportes!</Text>
-                    <Button className="mt-8 block m-[0_auto] lg:float-left" width={285}>CONFERIR</Button>
+                    <Link href={"#swiper"}>
+                        <Button className="mt-8 block m-[0_auto] lg:float-left" width={285}>CONFERIR</Button>
+                    </Link>
                 </div>
                 <div 
                     onMouseEnter={() => setOnHoverMale(true)} 

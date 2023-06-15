@@ -65,8 +65,8 @@ export type CardProps = {
     soldout?: boolean
     isLoading?: boolean
     product?: boolean
+    isFavorite?: boolean
 }
-
 type PriceProps = {
     discount: number
     value: number

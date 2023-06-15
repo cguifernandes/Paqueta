@@ -6,15 +6,15 @@ import { Scrollbar, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import "swiper/css/navigation"
-import Card from "./card";
-import { api } from "../api";
 import Skeleton from "../Skeleton/skeleton";
+import { CardForCards } from "./card";
 
 const getData = async () => {
-    const response = await api.get("/shoes");
+    const response = await fetch(`https://api.brchallenges.com/api/paqueta/shoes`);
 
-    return response.data;
+    return response.json();
 }
+
 
 const Cards = () => {
     const [shoes, setShoes] = useState<CardProps[] | null>(null);
@@ -78,7 +78,7 @@ const Cards = () => {
                 shoes?.map((shoes, index) => {
                         return (
                         <SwiperSlide key={index}>
-                            <Card
+                            <CardForCards
                                 soldout={shoes.soldout}
                                 name={shoes.name}
                                 price={shoes.price}

@@ -12,14 +12,13 @@ import Number from "@/components/Number/number";
 import Cards from "@/components/Cards/cards";
 import Image from "next/image";
 import Calcados from "@/components/Calcados/calcados";
+import Link from "next/link";
 
 export const metadata = {
   title: "Paquetá | Home",
 }
 
 const Main = () => {
-
-
   return (  
     <>
       <div className="w-full relative">
@@ -31,7 +30,9 @@ const Main = () => {
             <Text className={"text-black/50"}>A partir de</Text>
             <Heading className={"text-2xl xl:text-4xl"}>R$ 79,99</Heading>
           </div>  
-          <Button width={220}>APROVEITE</Button>
+          <Link href={"#swiper"}>
+            <Button width={220}>APROVEITE</Button>
+          </Link>
         </div>
       </div>
       <Banner />
@@ -61,7 +62,7 @@ const Main = () => {
         </div>
       </div>
       <div>
-        <div className="flex items-center justify-between px-[12.5%] py-10 flex-wrap gap-y-5">
+        <div className="flex items-center justify-between px-[12.5%] py-10 flex-wrap gap-y-5" id="swiper">
           <Heading className={"text-3xl font-montserrat text-center w-full sm:text-left sm:w-auto"}>DESTAQUES</Heading>
           <Text className={"text-lg cursor-pointer font-montserrat hover:text-black/50 text-center w-full sm:text-right sm:w-auto"}>CONFERIR TUDO</Text>
         </div>

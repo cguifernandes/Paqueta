@@ -32,7 +32,7 @@ const Header = () => {
                     <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer relative">
                         <Favorites />
                     </div>
-                    <div className="flex items-center my-4 justify-center lg:mx-6 cursor-pointer relative">
+                    <div className="my-4 lg:mx-6 cursor-pointer relative">
                         <Shopping />
                     </div>
                     <div className={clsx(
