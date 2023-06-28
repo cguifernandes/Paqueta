@@ -28,10 +28,10 @@ const ButtonShopping = ({ soldout, id, products } : ShoppingProps) => {
     }
     
     return (
-        products && !soldout ?
+        products && soldout ?
         <Button onClick={handlerClick} className="text-xl">COMPRAR</Button>
         :
-        products && soldout ?
+        products && !soldout ?
         <Button onClick={() => Toast("Você será notificado quando o produto estiver disponível.", false, true)} soldOut className="text-xl">ME AVISE QUANDO CHEGAR</Button>
         :
         !products && soldout ?

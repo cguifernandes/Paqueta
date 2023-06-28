@@ -236,7 +236,7 @@ export const CardForCards = ({ price, image, name, soldout, id } : CardProps) =>
                     </div>
                 </div>
             </Link>
-            <ButtonShopping id={id} soldout={soldout} />
+            <ButtonShopping id={id} soldout={soldout} products={false} />
         </div>
     );
 }
