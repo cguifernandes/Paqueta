@@ -10,7 +10,7 @@ export type TextProps = {
 export type ShoppingProps = {
     soldout: boolean | undefined
     id: string
-    products?: boolean
+    products: boolean
 }
 
 export type GroupProps = {
@@ -47,7 +47,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     children: ReactNode
     width?: number
     className?: string
-    soldOut?: boolean,
+    soldout?: boolean,
 }
 
 export type NumberProps = {

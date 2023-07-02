@@ -26,19 +26,34 @@ const ButtonShopping = ({ soldout, id, products } : ShoppingProps) => {
             Toast("O produto foi adicionado ao carrinho de compras.", true);
         }
     }
-    
-    return (
-        products && soldout ?
-        <Button onClick={handlerClick} className="text-xl">COMPRAR</Button>
-        :
-        products && !soldout ?
-        <Button onClick={() => Toast("Você será notificado quando o produto estiver disponível.", false, true)} soldOut className="text-xl">ME AVISE QUANDO CHEGAR</Button>
-        :
-        !products && soldout ?
-        <Button onClick={() => Toast("Você será notificado quando o produto estiver disponível.", false, true)} soldOut className="w-[85%] my-3 bottom-4 left-[50%] -translate-x-[50%] absolute">ME AVISE QUANDO CHEGAR</Button>  
-        :
-        <Button onClick={handlerClick} className="w-[85%] my-3 bottom-4 left-[50%] -translate-x-[50%] absolute">COMPRAR</Button>
-    )
+
+    if (products) {
+        if (soldout) {
+            return (
+                <Button onClick={() => Toast("Você será notificado quando o produto estiver disponível.", false, true)} soldout className="text-xl">ME AVISE QUANDO CHEGAR</Button>
+            )
+        }
+
+        else {
+            return (
+                <Button onClick={handlerClick} className="text-xl">COMPRAR</Button>
+            )
+        }
+    }
+
+    else {
+        if (soldout) {
+            return (
+                <Button onClick={() => Toast("Você será notificado quando o produto estiver disponível.", false, true)} soldout className="w-[85%] my-3 bottom-4 left-[50%] -translate-x-[50%] absolute">ME AVISE QUANDO CHEGAR</Button>  
+            )
+        }
+
+        else {
+            return (
+                <Button onClick={handlerClick} className="w-[85%] my-3 bottom-4 left-[50%] -translate-x-[50%] absolute">COMPRAR</Button>
+            )
+        }
+    }
 }
  
 export default ButtonShopping;
